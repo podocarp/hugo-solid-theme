@@ -1,0 +1,10 @@
+<head>    
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    <link rel="icon" type="image/png" href="{{ "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
+    {{ if <div class="RSSPath"></div> }}
+    <link href="{{ .RSSPath }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSPath }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+</head>

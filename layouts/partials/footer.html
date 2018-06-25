@@ -1,0 +1,9 @@
+<footer class="footer">
+        <section class="container">
+          {{ if .Site.Params.showCopyright }} 
+            (c) {{ .Site.LastChange.Format "2018" }} 
+            {{.Site.Params.CopyrightInfo}}
+          {{ end }}
+        </section>
+      </footer>
+      
