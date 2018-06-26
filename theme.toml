@@ -1,7 +1,7 @@
 name = "Solid"
 license = "MIT"
 licenselink = "https://github.com/podocarp/hugo-solid-theme/blob/master/LICENSE"
-description = "A soldi theme for hugo."
+description = "A solid theme for hugo."
 homepage = ""
 tags = [solid, blog, clean, minimal]
 features = []
