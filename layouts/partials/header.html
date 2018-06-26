@@ -1,15 +1,13 @@
 <nav class="navigation">
-  <section class="container">
-    <a class="navigation-title" href="{{ .Site.BaseURL }}">
+    <a href="{{ .Site.BaseURL }}">
       {{ .Site.Title }}
     </a>
-    {{ range .Site.Menus.main }}
-    <ul class="navigation-list">
-      <li class="navigation-item">
-        <a class="navigation-link" href="{{ .URL }}">{{ .Name }}</a>
+    <ul>
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
+      {{ end }}
     </ul>
-    {{ end }}
-  </section>
 </nav>
       
