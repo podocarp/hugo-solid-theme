@@ -1,0 +1,161 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  color: #323232;
+  background-color: #fefefe;
+  font-family: 'Consolas', monospace;
+  font-size: 1em;
+  font-weight: 200;
+  letter-spacing: .0625em;
+  line-height: 1.8em
+}
+
+a {
+  color: #36c;
+  text-decoration: none
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
+code {
+  background-color: #000;
+  color: #fefefe;
+  padding: .4rem .8rem .4rem .8rem
+}
+
+blockquote {
+  border-left: 2px solid #dcdcdc;
+  padding-left: 1.6rem;
+  font-style: italic
+}
+
+img {
+  max-width: 100%
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.navigation {
+  position: fixed;
+  background-color: #000;
+  color: #dcdcdc;
+  padding: 1%; /* Set this number for ul as well */
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.navigation a {
+  color: lightsalmon;
+}
+
+.navigation ul {
+  right: 0;
+  top: 0;
+  list-style: none;
+  position: fixed;
+  margin: 0;
+  padding: 1%;
+  overflow: hidden;
+}
+
+.navigation ul li {
+  float: right;
+  margin: 0;
+  position: relative;
+}
+
+.navigation ul li a {
+  display: block;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.massive {
+  height: 50%;
+  width: 50%;
+  position: fixed;
+  margin: auto;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.massive ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.massive ul li {
+  float: inherit;
+  margin: 0;
+  position: relative;
+}
+
+.centered {
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: center
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.float-right {
+  float: right
+}
+
+.float-left {
+  float: left
+}
+
+.list ul {
+  margin: 3.2rem 0 3.2rem 0;
+  list-style: none;
+  padding: 0
+}
+
+.list ul li {
+  font-size: 1.6rem
+}
+
+.list ul li span {
+  display: inline-block;
+  text-align: right;
+  width: 20rem;
+  margin-right: 3rem
+}
+
+.list ul li a {
+  text-transform: uppercase
+}
