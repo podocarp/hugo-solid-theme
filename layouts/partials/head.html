@@ -8,4 +8,14 @@
     <link href="{{ .Site.Params.RSSPath }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .Site.Params.RSSPath }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
+    {{ if .Site.Params.showLatex }}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    {{ end }}
+    {{ if .Site.Params.showSyntax }}
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    {{ end}}
+
 </head>

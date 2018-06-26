@@ -3,10 +3,12 @@ html {
 }
 
 body {
-  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 3%;
   color: #323232;
   background-color: #fefefe;
-  font-family: 'Consolas', monospace;
+  font-family: 'Arial', monospace;
   font-size: 1em;
   font-weight: 200;
   letter-spacing: .0625em;
@@ -14,13 +16,19 @@ body {
 }
 
 a {
-  color: #36c;
+  color: slategray;
+  background: bisque;
+  padding: 5px;
   text-decoration: none
 }
 
 a:focus,
 a:hover {
   text-decoration: underline
+}
+
+h1 {
+  font-size: 2em;
 }
 
 h1,
@@ -30,12 +38,27 @@ h4,
 h5,
 h6 {
   color: #000;
+  line-height: 1.5em;
+}
+
+header h1 {
+  font-size: 2em;
+  background-color: cornsilk;
+  padding-left: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-decoration: underline;
+}
+
+pre {
+  background: black;
+  display: inline-grid;
+  width: 100%;
 }
 
 code {
-  background-color: #000;
   color: #fefefe;
-  padding: .4rem .8rem .4rem .8rem
+  margin-left: 2%;
 }
 
 blockquote {
@@ -60,6 +83,7 @@ img {
   position: fixed;
   background-color: #000;
   color: #dcdcdc;
+  font-family: 'Courier New', Courier, monospace;
   padding: 1%; /* Set this number for ul as well */
   top: 0;
   left: 0;
@@ -68,6 +92,7 @@ img {
 
 .navigation a {
   color: lightsalmon;
+  background: black;
 }
 
 .navigation ul {
@@ -98,6 +123,7 @@ img {
   position: fixed;
   margin: auto;
   text-align: center;
+  font-family: 'Consolas', monospace;
   top: 0;
   bottom: 0;
   left: 0;
@@ -116,19 +142,23 @@ img {
 }
 
 .centered {
-  height: 100%;
-  width: 50%;
+  padding: 0;
+  margin: auto;
   align-items: center;
   justify-content: center
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   font-size: 0.7em;
   text-align: center;
+}
+
+.footer a{
+  background: white;
+  padding: 0;
 }
 
 .float-right {
@@ -139,21 +169,26 @@ img {
   float: left
 }
 
-.list ul {
-  margin: 3.2rem 0 3.2rem 0;
-  list-style: none;
-  padding: 0
-}
-
-.list ul li {
-  font-size: 1.6rem
-}
-
-.list ul li span {
+.list {
   display: inline-block;
-  text-align: right;
-  width: 20rem;
-  margin-right: 3rem
+  padding-bottom: 5%;
+}
+
+.list h2 {
+  margin: 0;
+}
+
+span.categories {
+  font-size: 0.8em;
+  padding: 5px;
+  background: lavenderblush;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+date {
+  font-size: 0.75em;
+  font-family: "Arial";
+  font-style: oblique;
 }
 
 .list ul li a {
