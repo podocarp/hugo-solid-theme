@@ -1,5 +1,5 @@
 +++
-draft = true
+draft = false
 date = {{ .Date}}
 title = ""
 summary = ""

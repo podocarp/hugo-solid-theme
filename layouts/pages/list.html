@@ -7,13 +7,13 @@
       <h2><a href="{{ .URL }}">{{ .Title }}</a></h2>
       <date>{{ .Date.Format "January 2, 2006" }}</date><br/>
       <span class="summary">{{ .Params.summary }}</span><br/>
-      <span class="categories">
       {{ if .Params.Categories }}Categories: 
+      <span class="categories">
       {{ range .Params.Categories }}
       <a href="/categories/{{.}}">{{.}}</a> 
       {{ end }}
-      {{ end }}
       </span>
+    {{ end }}
   </div>
   {{ end }}
 </div>
