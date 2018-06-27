@@ -187,7 +187,7 @@ footer a{
 }
 
 .list {
-  display: inline-block;
+  display: inline-table;
   padding-bottom: 5%;
 }
 
