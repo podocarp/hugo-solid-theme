@@ -107,6 +107,26 @@ blockquote {
   margin-left: 50px;
 }
 
+.breadcrumb {
+  font-size: 0.8em;
+  padding: 0;
+  font-style: italic;
+}
+
+.breadcrumb li{
+  display: inline-block;
+}
+
+.breadcrumb li.active{
+  font-style: normal;
+}
+
+.breadcrumb li.active>a {
+  background-color: white;
+  font-weight: bold;
+  pointer-events: none;
+}
+
 .massive {
   height: 50%;
   width: 50%;
