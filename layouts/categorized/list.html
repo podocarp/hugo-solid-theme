@@ -1,13 +1,14 @@
 {{ define "main" }}
 <div class="container">
     <header>
-      <h1>Category: {{ .Title }}</h1>
+      <h1>Section: {{ .Title }}</h1>
     </header>
     {{ partial "breadcrumb.html" . }}
-
+    
     <br/><br/>
-    {{ range .Paginator.Pages }}
+    {{ range where .Site.RegularPages ".Params.tags" "intersect" .Params.tags }}
     {{ partial "list.html" . }}
     {{ end }}
   </div>
+
 {{ end }}

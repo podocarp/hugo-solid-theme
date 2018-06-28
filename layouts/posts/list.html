@@ -1,12 +1,12 @@
 {{ define "main" }}
 <div class="container">
     <header>
-      <h1>Category: {{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
     </header>
     {{ partial "breadcrumb.html" . }}
 
     <br/><br/>
-    {{ range .Paginator.Pages }}
+    {{ range .Site.RegularPages }}
     {{ partial "list.html" . }}
     {{ end }}
   </div>

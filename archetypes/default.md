@@ -1,6 +1,7 @@
-+++
-draft = false
-date = {{ .Date}}
++++ 
+date = {{ .Date }}
 title = ""
 summary = ""
+tags = []
+categories = []
 +++

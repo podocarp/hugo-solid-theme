@@ -4,4 +4,5 @@ title = ""
 summary = ""
 tags = []
 categories = []
+suggestedCategories = []
 +++
