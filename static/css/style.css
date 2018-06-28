@@ -15,7 +15,7 @@ body {
   body {
     padding-left: 20%;
     padding-right: 20%;
-    font-size: 1.3vw;
+    font-size: 1.15vw;
   }
 }
 
@@ -263,17 +263,25 @@ aside ul {
   padding-left: 5%;
 }
 
+aside>nav>ul{
+  list-style: none;
+  padding: 1%;
+}
+
 @media (min-width: 992px) {
   aside { 
     position: fixed;
-    left:3%;
+    left:2%;
     top: 20%;
-    font-size: 1.2vw;
-    line-height: 2vw;
-    padding-left: 2%;
-    max-width: 15%;
-    overflow: scroll;
+    font-size: 1vw;
+    line-height: 1.8vw;
+    max-width: 10%;
+    padding-right: 5%;
+    overflow: hidden;
+  }
 
+  aside ul {
+    padding-left: 20%;
   }
 }
 
