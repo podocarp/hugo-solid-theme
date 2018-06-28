@@ -1,6 +1,6 @@
 body {
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 3%;
   color: #323232;
   background-color: #fefefe;
@@ -16,8 +16,10 @@ aside {
   list-style: georgian;
   border: 1px gainsboro;
   border-style: ridge;
-  left:3%;
-  top: 40%;
+  left:1%;
+  top: 20%;
+  font-size: 12px;
+  line-height: 20px;
 }
 
 aside>nav>ul {
