@@ -1,6 +1,6 @@
 body {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   padding-top: 3%;
   color: #323232;
   background-color: #fefefe;
@@ -9,6 +9,29 @@ body {
   font-weight: 200;
   letter-spacing: .0625em;
   line-height: 1.8em
+}
+
+aside { 
+  position: fixed;
+  list-style: georgian;
+  border: 1px gainsboro;
+  border-style: ridge;
+  left:3%;
+  top: 40%;
+}
+
+aside>nav>ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+aside a{
+  background-color: white;
+}
+
+.content {
+  padding-left: 10%;
+  padding-right: 10%
 }
 
 .row {
@@ -89,6 +112,7 @@ blockquote {
 }
 
 .navigation {
+  z-index: 100;
   position: fixed;
   background-color: #000;
   color: #dcdcdc;
@@ -207,6 +231,7 @@ footer a{
 
 .list {
   display: inline-table;
+  padding-right: 5%;
   padding-bottom: 5%;
 }
 

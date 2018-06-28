@@ -1,3 +1,21 @@
 {{ define "main" }}
-{{ partial "single.html" . }}
+<section class="container">
+    {{ partial "breadcrumb.html" . }}
+    <header>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
+    {{ if .Params.Categories }}
+    <span class="categories">
+        Categories: 
+        {{ range .Params.Categories }}<a href="/categories/{{.}}">{{.}}</a> {{ end }}
+        </span>
+    {{ end }}
+    <aside>
+    {{ .TableOfContents }}
+    </aside>
+    <div class="content">
+    {{ .Content }}
+    </div>
+  </section>
 {{ end }}
