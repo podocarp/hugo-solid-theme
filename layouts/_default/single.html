@@ -6,10 +6,10 @@
     </header>
     <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
     {{ if .Params.Categories }}
-    <span class="categories">
+    <div class="categories">
         Categories: 
         {{ range .Params.Categories }}<a href="/categories/{{.}}">{{.}}</a> {{ end }}
-        </span>
+    </div>
     {{ end }}
     <aside>
     {{ .TableOfContents }}
