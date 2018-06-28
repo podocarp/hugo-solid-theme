@@ -11,6 +11,26 @@ body {
   line-height: 1.8em
 }
 
+.row {
+  display: flex;
+}
+
+.row .col-2 {
+  flex: 50%;
+  padding: 1%;
+}
+
+.row .col-3 {
+  flex: 33.33%;
+  padding: 1%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 a {
   color: slategray;
   background: bisque;
@@ -53,7 +73,6 @@ pre {
 }
 
 code {
-  color: #fefefe;
   margin-left: 2%;
 }
 

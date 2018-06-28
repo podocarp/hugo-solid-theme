@@ -2,6 +2,15 @@
   <header>
     <h1>{{ .Title }}</h1>
   </header>
+  {{ if .Params.suggestedCategories }}
+  <span class="categories">
+      You're looking at everything. Check out these categories:
+        {{ range .Params.suggestedCategories }}
+      <a href="/categories/{{.}}">{{.}}</a> 
+      {{ end }}
+    </span>
+  {{ end }}
+  <br/><br/>
   {{ range .Paginator.Pages }}
   <div class="list">
       <h2><a href="{{ .URL }}">{{ .Title }}</a></h2>
