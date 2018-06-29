@@ -7,7 +7,7 @@
     
     <br/><br/>
     {{ range where .Site.RegularPages ".Params.tags" "intersect" .Params.tags }}
-    {{ partial "list.html" . }}
+    {{ partial "listBody.html" . }}
     {{ end }}
   </div>
 

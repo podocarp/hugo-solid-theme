@@ -4,7 +4,7 @@
     </a>
     <ul>
       {{ range .Site.Menus.main }}
-      <li>
+      <li {{ if (eq $.Type (lower .Name))}}class="active"{{ end }}>
         <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }}

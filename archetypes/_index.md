@@ -1,5 +1,6 @@
 +++ 
 date = {{ .Date }}
+type = ""
 title = ""
 summary = ""
 tags = []

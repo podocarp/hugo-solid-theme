@@ -1,0 +1,144 @@
+body {
+    padding-top: 3%;
+    color: #000000;
+    background-color: #1d1515;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 200;
+    letter-spacing: .0625em;
+    line-height: 1.8em;
+}
+
+.content {
+    background-color: lavenderblush;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: azure;
+}
+
+.content h1,h2,h3,h4,h5,h6 {
+    color: #290d0d;
+}
+
+.wraptext {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+
+a {
+    color: aliceblue;
+}
+
+.list {
+    text-align: center;
+    background-color: rgb(160, 152, 152);
+    color: rgb(46, 39, 39);
+    margin-bottom: 2%;
+    position: relative;
+    height: 50vw;
+}
+
+@media(min-width:665px){
+    .list {
+        height: 30vw;
+    }
+    .list:nth-child(odd){
+        flex-direction: row-reverse;
+    }
+    .banner-img{
+        height: 100%;
+    }
+}
+
+.banner-img-controller {
+    overflow: hidden;
+    min-height: 50%;
+    width: 100%;
+}
+
+.banner-img {
+    width: 100%;
+    display: block;
+}
+
+.banner-link {
+    padding: 0;
+}
+
+.banner-expander {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.post {
+    display: flex;
+}
+
+.post h2 {
+    font-size: 2vw;
+}
+
+.post h2::after {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 0.3vw;
+    left: 40%;
+    margin-top: 3%;
+    display: block;
+    clear: both;
+    background-color: black;
+}
+
+.summary {
+    text-overflow: ellipsis;
+    max-height: 30%
+}
+
+
+.breadcrumb li {
+    color: wheat;
+}
+
+.footer {
+    color: rgb(150, 177, 177);
+}
+
+img.wrapleft {
+    float: left;    
+    padding: 5%;
+    max-width: 50%;
+    max-height: 50vh;
+}
+img.wrapright {
+    float: right;
+    padding: 5%;
+    max-width: 50%;
+    max-height: 50vh;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img.bw {
+    filter: grayscale(100%)
+}
