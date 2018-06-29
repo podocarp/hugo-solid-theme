@@ -142,3 +142,7 @@ img.center {
 img.bw {
     filter: grayscale(100%)
 }
+
+aside {
+    display: none;
+}

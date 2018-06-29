@@ -1,21 +1,23 @@
 {{ define "main" }}
 <section class="container">
-  {{ partial "breadcrumb.html" . }}
-  <header>
-    <h1>{{ .Title }}</h1>
-  </header>
+  <aside>
+    &nbsp;Contents:
+    {{ .TableOfContents }}
+  </aside>
   <div class="content">
+      {{ partial "breadcrumb.html" . }}
+      <header>
+        <h1>{{ .Title }}</h1>
+      </header>
   <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
   {{ if .Params.Categories }}
   <div class="categories">
     Categories: {{ range .Params.Categories }}
     <a href="/categories/{{.}}">{{.}}</a> {{ end }}
   </div>
+  <hr>
   {{ end }}
     {{ .Content }}
   </div>
-        <aside>
-          {{ .TableOfContents }}
-        </aside>
 </section>
 {{ end }}

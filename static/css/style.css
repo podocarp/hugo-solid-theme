@@ -1,3 +1,53 @@
+.content {
+  padding-left: 0%;
+  padding-right: 0%;
+  font-size: 2vw;
+  line-height: 3vw;
+}
+
+@media(min-width:665px) {
+  .content {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.7vw;
+    line-height: 3vw;
+  }
+}
+
+@media(min-width:995px) {
+  .content {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.4vw;
+    line-height: 2.5vw;
+  }
+}
+
+@media(min-width:1200px) {
+  .content {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+}
+
+figure {
+  float: left;
+  padding: 3%;
+  font-style: italic;
+  font-size: 1vw;
+  text-align: center;
+}
+
+figure>img{
+  width: 100%;
+}
+
+figure:nth-child(even){
+  float: right;
+}
+
 code {
   margin-left: 2%;
 }
@@ -17,61 +67,28 @@ code {
 }
 
 .list {
-display: inline-table;
-padding-right: 5%;
-padding-bottom: 5%;
+  display: inline-table;
+  padding-right: 5%;
+  padding-bottom: 5%;
 }
-  
+
 .list h2 {
-margin: 0;
+  margin: 0;
 }
 
 .massive ul {
-list-style-type: none;
-padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .massive ul li {
-float: inherit;
-margin: 0;
-position: relative;
+  float: inherit;
+  margin: 0;
+  position: relative;
 }
 
 .massive ul li a {
-background-color: coral;
-color: aliceblue;
-font-weight: bold
-}
-
-aside {
-  border: 1px gainsboro;
-  border-style: ridge;
-  font-size: 1.5vw;
-  line-height: 2.5vw;
-}
-
-aside ul { 
-  padding-left: 5%;
-}
-
-aside>nav>ul{
-  list-style: none;
-  padding: 1%;
-}
-
-@media (min-width: 992px) {
-  aside { 
-    position: fixed;
-    left:2%;
-    top: 20%;
-    font-size: 1vw;
-    line-height: 1.8vw;
-    max-width: 10%;
-    padding-right: 5%;
-    text-overflow: ellipsis;
-  }
-
-  aside ul {
-    padding-left: 20%;
-  }
+  background-color: coral;
+  color: aliceblue;
+  font-weight: bold
 }

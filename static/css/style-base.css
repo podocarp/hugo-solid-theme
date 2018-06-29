@@ -66,7 +66,7 @@ a:hover {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 h1,
@@ -80,7 +80,8 @@ h6 {
 }
 
 header h1 {
-    font-size: 2em;
+    color: #000000;
+    font-size: 2.5em;
 }
 
 pre {
@@ -108,9 +109,10 @@ blockquote {
     background-color: #000;
     color: #dcdcdc;
     font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 1.1em;
+    font-size: 1.3vw;
     top: 0;
     left: 0;
+    align-items: center;
     width: 100vw;
 }
 
@@ -136,11 +138,11 @@ a:focus {
 }
 
 .navigation .active {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .navigation .active a {
-    color: #323232;
+    color: #000000;
 }
 
 .navigation a {
@@ -199,7 +201,7 @@ date {
     font-style: oblique;
 }
 
-hr {
+.content hr {
     width: 30%;
 }
 
@@ -209,15 +211,65 @@ blockquote {
     margin: 1% 10% 1% 10%;
     padding: 1% 3%;
     quotes: "\201C""\201D""\2018""\2019";
-  }
-  blockquote:before {
+}
+
+blockquote:before {
     color: rgb(0, 0, 0);
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;
     margin-right: 0.25em;
     vertical-align: -0.4em;
-  }
-  blockquote p {
+}
+
+blockquote p {
     display: inline;
-  }
+}
+
+aside {
+    border: 1px gainsboro;
+    border-style: ridge;
+    font-size: 1.3vw;
+    line-height: 2.5vw;
+    margin: 0 10% 0 10%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+aside ul {
+    padding-left: 5%;
+    list-style: none;
+}
+
+aside>nav>ul {
+    list-style: none;
+    padding: 1%;
+}
+
+@media (min-width: 992px) {
+    aside {
+        float: left;
+        position: fixed;
+        left: 5%;
+        top: 40%;
+        margin: 0;
+        font-size: 1vw;
+        line-height: 1.8vw;
+        max-width: 10%;
+        padding-right: 5%;
+        text-overflow: ellipsis;
+    }
+    aside ul {
+        padding-left: 20%;
+    }
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
