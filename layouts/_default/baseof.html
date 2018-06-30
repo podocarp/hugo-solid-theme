@@ -4,6 +4,7 @@
     <body>
         {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
+        {{ partial "javascript.html" }}
     </body>
     {{- partial "footer.html" . -}}
 </html>

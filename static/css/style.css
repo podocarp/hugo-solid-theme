@@ -32,11 +32,54 @@
   }
 }
 
+
+aside {
+  border: 1px gainsboro;
+  border-style: ridge;
+  font-size: 1.3vw;
+  line-height: 2.5vw;
+  margin: 0 10% 0 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
+aside ul {
+  padding-left: 5%;
+  list-style: none;
+}
+
+aside>nav>ul {
+  list-style: none;
+  padding: 1%;
+}
+
+@media (min-width: 992px) {
+  aside {
+      float: left;
+      position: fixed;
+      left: 3%;
+      top: 40%;
+      margin: 0;
+      font-size: 1vw;
+      line-height: 1.8vw;
+      max-width: 20%;
+      padding-right: 0%;
+      text-overflow: ellipsis;
+  }
+  aside ul {
+      padding-left: 20%;
+  }
+}
+
 figure {
   float: left;
-  padding: 3%;
+  margin: 3%;
+  padding: 0;
+  max-width: 80%;
   font-style: italic;
-  font-size: 1vw;
+  font-size: .9vw;
+  line-height: 1vw;
   text-align: center;
 }
 

@@ -2,21 +2,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>{{ .Site.Title }}</title>
-    <link rel="icon" type="image/png" href="{{ "/img/favicon-32x32.png" | absURL }}" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ " /img/favicon-32x32.png " | absURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ " /img/favicon-16x16.png " | absURL }}" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:600" rel="stylesheet">
-    
-<link rel="stylesheet" href="{{ "css/style-base.css" | absURL }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ "css/style-base.css" | absURL }}"> 
     {{ if eq .Type "photo" }}
-    <link rel="stylesheet" href="{{ "css/photo-style.css" | absURL }}">
-    {{ else }}
-        {{ if .Site.Params.showLatex }}
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
-        {{ end }}
-        <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "css/photo-style.css" | absURL }}"> 
+    {{ else }} 
+    <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}"> 
+    {{ end }} 
+
+    {{ if .Site.Params.showLatex }}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
     {{ end }}
+    
     {{ if .Site.Params.showRSS }}
     <link href="{{ .Site.Params.RSSPath }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="{{ .Site.Params.RSSPath }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
+
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
 </head>
