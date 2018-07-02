@@ -111,8 +111,7 @@ code {
 
 .list {
   display: inline-table;
-  padding-right: 5%;
-  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 .list h2 {
