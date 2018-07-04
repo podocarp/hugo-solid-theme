@@ -1,11 +1,10 @@
-
-<figure>
+<figure
+{{ if .Get "style" }} 
+style="{{.Get "style"}}"
+{{else}} style="width:20%;"
+{{end}}>
 <a href="{{ .Get "src" }}" data-featherlight="image">
-    <img src="{{ .Get "src" }}" 
-    {{ if .Get "style" }} style="{{.Get "style"}}"
-        {{else}} style="width:200px;"
-    {{end}}
-    >
+    <img src="{{ .Get "src" }}" style="max-width:100%" >
 </img>
 </a>
 <figcaption>{{ .Get "caption" }}</figcaption>
