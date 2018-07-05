@@ -50,8 +50,13 @@ a {
     height: 50vw;
 }
 
-@media(min-width:665px){
+.list {
+    flex-direction: column-reverse;
+}
+
+@media(min-width:600px){
     .list {
+        flex-direction: row;
         height: 30vw;
     }
     .list:nth-child(odd){

@@ -1,14 +1,4 @@
 {{ define "main" }}
-<div class="container">
-    <header>
-      <h1>Section: {{ .Title }}</h1>
-    </header>
-    {{ partial "breadcrumb.html" . }}
-    
-    <br/><br/>
-    {{ range where .Site.RegularPages ".Params.tags" "intersect" .Params.tags }}
-    {{ partial "listBody.html" . }}
-    {{ end }}
-  </div>
-
+    {{ .Scratch.Set "pages" (where .Site.RegularPages ".Params.tags" "intersect" .Params.tags) }}
+    {{ partial "list_default.html" . }}
 {{ end }}

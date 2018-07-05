@@ -1,0 +1,30 @@
+{{ range .Scratch.Get "pages"}}
+<div class="list row">
+    <a href="{{ .URL }}" class="banner-link">
+        <span class="banner-expander"></span>
+    </a>
+
+    <div class="col-2 post">
+        <div class="centered">
+            <h2>{{ .Title }}</h2>
+
+            <date>{{ .Date.Format "January 2, 2006" }}</date>
+            <br/>
+            <p class="summary">{{ .Params.summary }}</p>
+
+            {{ if .Params.Categories }}
+            <p class="categories">
+                Categories: {{ range .Params.Categories }}
+                <a href="/categories/{{.}}">{{.}}</a>
+                {{ end }}
+            </p>
+            {{ end }}
+
+        </div>
+    </div>
+    <div class="col-2 banner-img-controller">
+        <img class="banner-img" src="{{ .Params.bannerImgSrc }}"></img>
+    </div>
+</div>
+</div>
+{{ end }}

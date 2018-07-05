@@ -1,0 +1,25 @@
+{{ partial "list_header.html" . }}
+<div class="row">
+{{ range $index, $page := .Scratch.Get "pages" }}
+        <div class="col-2 box">
+            <h2>
+                <a href="{{ .URL }}">{{ .Title }}</a>
+            </h2>
+            
+            <date>{{ .Date.Format "January 2, 2006" }}</date>
+            <br/>
+            <p class="summary">{{ .Params.summary }}</p>
+            
+            {{ if .Params.Categories }}
+            <p class="categories">
+                Categories: {{ range .Params.Categories }}
+                <a href="/categories/{{.}}">{{.}}</a>
+                {{ end }}
+            </p>
+        </div>
+    {{ end }}
+        {{ if (modBool (add $index 1) 2) }}
+            </div><div class="row">
+        {{ end }}
+{{ end }}
+    </div>

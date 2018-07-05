@@ -1,3 +1,4 @@
 {{ define "main" }}
-{{ partial "typedList.html" . }}
+{{ .Scratch.Set "pages" (where .Site.RegularPages ".Type" .Type) }}
+    {{ partial "list_photo.html" . }}
 {{ end }}

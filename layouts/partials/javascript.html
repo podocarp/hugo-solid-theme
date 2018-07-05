@@ -1,2 +1,16 @@
 <script src="//code.jquery.com/jquery-latest.js"></script>
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+{{ if .Params.useFLGallery }}
+<script>
+    $(document).ready(function () {
+        $('.gallery').featherlightGallery({
+            previousIcon: '&#9664;',
+            nextIcon: '&#9654;',
+            galleryFadeIn: 300,
+            galleryFadeOut: 300,
+            targetAttr: "data-featherlight-gallery"
+        });
+    });
+</script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+{{ end }}

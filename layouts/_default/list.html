@@ -1,13 +1,4 @@
 {{ define "main" }}
-<div class="container">
-    <header>
-      <h1>Category: {{ .Title }}</h1>
-    </header>
-    {{ partial "breadcrumb.html" . }}
-
-    <br/><br/>
-    {{ range .Paginator.Pages }}
-    {{ partial "listBody.html" . }}
-    {{ end }}
-  </div>
+  {{ .Scratch.Set "pages" .Paginator.Pages }}
+  {{ partial "list_default.html" . }}
 {{ end }}
