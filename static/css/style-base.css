@@ -20,6 +20,7 @@ body {
 
 .row {
     display: flex;
+    flex-direction: column;
     height: fit-content;
 }
 
@@ -196,7 +197,19 @@ footer {
 }
 
 .categories {
-    font-size: 1vw;
+    font-size: 1.7vw;
+}
+
+@media(min-width:600px){
+    .categories{
+        font-size: 1.2vw;
+    }
+}
+
+@media(min-width:1200px){
+    .categories{
+        font-size: 1vw;
+    }
 }
 
 date {

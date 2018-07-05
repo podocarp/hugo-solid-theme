@@ -11,12 +11,27 @@ body {
   padding-right: 2%;
 }
 
+
+.box {
+  flex: 33% !important;
+  border: 2px gray solid;
+  box-shadow: 2px 2px;
+  padding: 1%;
+  margin: 2% 1% 2% 1% !important;
+  height: auto !important;
+  font-size: 2vw;
+}
+
 @media(min-width:600px) {
   .content {
     padding-left: 5%;
     padding-right: 5%;
     font-size: 1.7vw;
     line-height: 3vw;
+  }
+  .box {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
   }
 }
 
@@ -36,17 +51,15 @@ body {
     font-size: 1.1vw;
     line-height: 1.9vw;
   }
+  .box {
+    font-size: 1.3vw;
+    line-height: 2vw;
+    margin: 1% 1% 1% 1% !important;
+  }
 }
 
-.box {
-  flex: 33% !important;
-  border: 2px gray solid;
-  box-shadow: 2px 2px;
-  padding: 1%;
-  margin: 2% 1% 2% 1% !important;
-  height: auto !important;
-  font-size: 1.5vw;
-}
+
+
 
 ul {
   padding-left: 5%;
