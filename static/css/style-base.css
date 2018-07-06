@@ -43,9 +43,6 @@ body {
     .row {
         flex-direction: row;
     }
-    .row .col-2 {
-        max-width: 50%;
-    }
     .thumbnail {
         width: 256px;
         height: 256px;;
