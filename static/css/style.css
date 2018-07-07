@@ -11,7 +11,6 @@ body {
   padding-right: 2%;
 }
 
-
 .box {
   flex: 33% !important;
   border: 2px gray solid;
@@ -46,7 +45,7 @@ body {
 
 @media(min-width:1200px) {
   .content {
-    padding-left: 20%;
+    padding-left: 25%;
     padding-right: 20%;
     font-size: 1.1vw;
     line-height: 1.9vw;
@@ -57,9 +56,6 @@ body {
     margin: 1% 1% 1% 1% !important;
   }
 }
-
-
-
 
 ul {
   padding-left: 5%;
@@ -88,20 +84,20 @@ aside>nav>ul {
 
 @media (min-width: 1200px) {
   aside {
-      float: left;
-      position: fixed;
-      left: 2%;
-      top: 20%;
-      margin: 0;
-      font-size: 1vw;
-      line-height: 1.8vw;
-      max-width: 15%;
-      overflow: auto;
-      padding-right: 0%;
-      text-overflow: ellipsis;
+    float: left;
+    position: fixed;
+    left: 2%;
+    top: 20%;
+    margin: 0;
+    font-size: 1vw;
+    line-height: 1.8vw;
+    max-width: 20%;
+    overflow: auto;
+    padding-right: 0%;
+    text-overflow: ellipsis;
   }
   aside ul {
-      padding-left: 20%;
+    padding-left: 20%;
   }
 }
 
@@ -116,8 +112,31 @@ figure {
   text-align: center;
 }
 
-figure:nth-child(even){
+figure:nth-child(even) {
   float: right;
+}
+
+figure>img {
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 2vw;
+  line-height: 2.3vw;
+}
+
+@media(min-width:600px) {
+  figcaption {
+    font-size: 1.5vw;
+    line-height:uvw;
+  }
+}
+
+@media(min-width:1000px) {
+  figcaption {
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+  }
 }
 
 code {

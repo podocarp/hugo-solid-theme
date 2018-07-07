@@ -1,13 +1,26 @@
-{{- $fullURL := .Get "fullURL" -}}
-{{- $thumbURL := .Get "thumbURL" -}}
-{{- $path := .Get "path" -}}
-{{- $files := readDir $path -}}
+{{- $staticURL := .Get "staticDir" -}}
+{{- $parentURL := .Get "parentDir" -}}
+{{- $fullURL := add $parentURL (.Get "fullDir") -}}
+{{- $thumbURL := add $parentURL (.Get "thumbDir") -}}
+
+{{ if .Get "miniThumbDir" }}
+{{ .Scratch.Set "miniThumbURL" (add $parentURL (.Get "miniThumbDir")) }}
+{{ end }}
+
+{{- $files := readDir (add $staticURL $thumbURL) -}}
 <div class="row">
 {{- range $index, $file := $files }}
 <div class="col-3">
-<a href="#" class="gallery" data-featherlight-gallery="{{ $fullURL }}{{ .Name | relURL }}">
-        <img class="thumbnail" src="{{ $thumbURL }}{{ .Name | relURL }}" style="max-width:100%" >
+<a href="#" 
+    class="gallery" 
+    data-featherlight-gallery="{{ $fullURL }}{{ .Name | relURL }}">
+        
+    <img class="thumbnail lazy" 
+        {{ if $.Scratch.Get "miniThumbURL" }} src="{{ $.Scratch.Get "miniThumbURL" }}{{ .Name | relURL }}" {{ end }}
+        data-src="{{ $thumbURL }}{{ .Name | relURL }}"
+        style="max-width:100%" >
     </img>
+
 </a>
 </div>
 {{ if (modBool (add $index 1) 3) }}

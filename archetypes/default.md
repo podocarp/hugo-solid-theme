@@ -1,8 +1,12 @@
 +++ 
+draft = false
 date = {{ .Date }}
-type = "post"
+type = "blog"
 title = ""
 summary = ""
-tags = []
-categories = []
+tags = [""]
+categories = [""]
+useFL = false
+useFLGallery = false
+showLatex = false
 +++

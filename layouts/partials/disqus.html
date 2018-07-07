@@ -6,7 +6,7 @@ this.page.identifier = {{ .UniqueID }}; // Replace PAGE_IDENTIFIER with your pag
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-s.src = 'https://jxds-blog.disqus.com/embed.js';
+s.src = "{{ .Site.Params.disqusURL }}";
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();

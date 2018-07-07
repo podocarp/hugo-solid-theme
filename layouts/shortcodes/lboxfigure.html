@@ -1,10 +1,14 @@
 <figure
 {{ if .Get "style" }} 
 style="{{.Get "style"}}"
-{{else}} style="width:20%;"
+{{else}}
+style="width:20%;"
 {{end}}>
 <a href="#" data-featherlight="{{ .Get "src" }}">
-    <img src="{{ .Get "src" }}" style="max-width:100%" >
+    <img class="lazy" 
+    {{if .Get "minithumb"}}src="{{ .Get "minithumb" }}"{{end}}
+     data-src="{{ if .Get "thumb" }}{{ .Get "thumb" }}{{ else }}{{ .Get "src" }}{{end}}" 
+     style="max-width:100%" >
 </img>
 </a>
 <figcaption>{{ .Get "caption" }}</figcaption>
