@@ -20,9 +20,8 @@ body {
 
 .row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: fit-content;
-    align-items: center;
 }
 
 .row .col-2 {
@@ -45,6 +44,9 @@ body {
     .thumbnail {
         width: 130px;
         height: 130px;
+    }
+    .row {
+        flex-direction: row;
     }
 }
 

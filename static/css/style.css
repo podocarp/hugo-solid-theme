@@ -12,7 +12,7 @@ body {
 }
 
 .box {
-  flex: 33% !important;
+  flex: 50% !important;
   border: 2px gray solid;
   box-shadow: 2px 2px;
   padding: 1%;
@@ -137,6 +137,10 @@ figcaption {
     font-size: 1.3vw;
     line-height: 1.5vw;
   }
+}
+
+.gallery {
+  flex-direction: row !important;
 }
 
 code {
