@@ -21,6 +21,7 @@ body {
 .row {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     height: fit-content;
 }
 
@@ -62,15 +63,8 @@ body {
 }
 
 .row .col-3 {
-    flex: 33.33%;
     max-width: 33.33%;
     padding: 1%;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 
 a {

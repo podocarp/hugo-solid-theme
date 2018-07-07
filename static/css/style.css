@@ -91,10 +91,9 @@ aside>nav>ul {
     margin: 0;
     font-size: 1vw;
     line-height: 1.8vw;
-    max-width: 20%;
+    max-width: 25%;
     overflow: auto;
     padding-right: 0%;
-    text-overflow: ellipsis;
   }
   aside ul {
     padding-left: 20%;
@@ -132,7 +131,7 @@ figcaption {
   }
 }
 
-@media(min-width:1000px) {
+@media(min-width:1200px) {
   figcaption {
     font-size: 1.3vw;
     line-height: 1.5vw;
