@@ -1,12 +1,9 @@
 +++ 
-draft = false
 date = {{ .Date }}
-type = "blog"
+type = ""
 title = ""
 summary = ""
-tags = [""]
-categories = [""]
-useFL = false
-useFLGallery = false
-showLatex = false
+tags = []
+categories = []
+suggestedCategories = []
 +++

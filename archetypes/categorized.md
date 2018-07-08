@@ -1,11 +1,12 @@
 +++ 
+draft = false
 date = {{ .Date }}
-type = "photo"
+type = "blog"
 title = ""
 summary = ""
-tags = ["photo"]
-categories = ["photo"]
+tags = [""]
+categories = [""]
 useFL = false
 useFLGallery = false
-bannerImgSrc = ""
+showLatex = false
 +++

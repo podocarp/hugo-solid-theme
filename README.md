@@ -41,15 +41,19 @@ Suggested ways to get the different images with imagemagick (change sizes to fit
 minithumb (1-3K):
 
 ```
- mogrify -path minithumb -auto-orient -filter Triangle -dither none -interlace none -colorspace sRGB -quality 20% -thumbnail 32 -density 10 -units pixelsperinch -format jpg *.jpg; mogrify -path minithumb -auto-orient -define jpg:fancy-upscaling=off -gaussian-blur 2 -resize 256 -format jpg minithumb/*.jpg
+ mkdir minithumb;
+ mogrify -path minithumb -auto-orient -filter Triangle -dither none -interlace none -colorspace sRGB -quality 20% -thumbnail 32 -density 10 -units pixelsperinch -format jpg *.jpg;
+ mogrify -path minithumb -auto-orient -define jpg:fancy-upscaling=off -gaussian-blur 2 -resize 256 -format jpg minithumb/*.jpg
 ```
 
 thumb (10-20K, mostly around 10-15K):
 ```
+ mkdir thumb;
  mogrify -path thumb -auto-orient -filter Triangle -dither none -interlace none -colorspace sRGB -quality 60% -thumbnail 256 -format jpg *.jpg;
 ```
 
 full (50K-150K):
 ```
+mkdir full;
 mogrify -path full -auto-orient -filter Triangle -dither none -interlace none -colorspace sRGB -quality 80% -resize 600 -format jpg *.jpg;
 ```

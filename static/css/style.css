@@ -115,13 +115,20 @@ figure:nth-child(even) {
   float: right;
 }
 
-figure>img {
+figure.center {
+  float: none;
+  margin: 0 auto;
+}
+
+figure>a {
   max-width: 100%;
+  margin: 0 auto;
 }
 
 figcaption {
-  font-size: 2vw;
+  font-size: 2.1vw;
   line-height: 2.3vw;
+  font-weight: lighter;
 }
 
 @media(min-width:600px) {
@@ -133,7 +140,7 @@ figcaption {
 
 @media(min-width:1200px) {
   figcaption {
-    font-size: 1.3vw;
+    font-size: 1vw;
     line-height: 1.5vw;
   }
 }
