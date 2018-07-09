@@ -13,10 +13,13 @@
     {{ if .p1.IsHome }}
     <a href="/posts">{{ .p1.Title }}</a>
     {{ else }}
-    
     <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
     {{ end }}
-    {{ if not (eq .p1 .p2) }}⇢{{end}}
+    {{ if (eq .p1 .p2) }}
+    {{ with .p1.OutputFormats.Get "rss" }}<a style="pointer-events: initial" href="{{.Permalink}}"><img src="/img/feed-icon-14x14.png"/></a>{{end}}
+    {{ else }}
+        ⇢
+    {{ end }}
     </li>
     {{end}}
 {{ end }}

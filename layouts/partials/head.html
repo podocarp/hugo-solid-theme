@@ -5,6 +5,10 @@
     <link rel="icon" type="image/png" href="{{ "/img/favicon-32x32.png" | absURL }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16">
 
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:600" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{ "css/style-base.css" | absURL }}"> 
@@ -14,8 +18,8 @@
     <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}"> 
     {{ end }} 
     
-    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     {{ if .Params.useFLGallery }}
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
     {{ end }}
 
