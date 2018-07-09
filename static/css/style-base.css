@@ -61,6 +61,7 @@ body {
 
 .lazy {
     filter: blur(100%);
+    animation-play-state: paused !important;
 }
 
 .row .col-3 {
@@ -170,6 +171,7 @@ a:focus {
 .breadcrumb {
     font-size: 0.8rem;
     padding: 0;
+    text-align: initial;
     font-style: italic;
 }
 
@@ -336,12 +338,13 @@ form select {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 20%;
+    width: 0;
     max-width: 100%;
     overflow: hidden;
     resize: horizontal;
     border-right: 3px rgba(255, 253, 253, 0.432) solid;
     box-sizing: border-box;
+    animation: slidemax 15s ease-in-out 0s infinite alternate;
 }
 
 .image-slider>div:before {
@@ -350,12 +353,28 @@ form select {
     right: 3px;
     content: '';
     display: block;
+    height: 3vw;
     width: 3vw;
-    height: 100%;
+    box-shadow: 3px 6px 2px 0 black;
     overflow: hidden;
     resize: horizontal;
     background-clip: content-box;
     background: linear-gradient(-45deg, white 50%, transparent 0);
+}
+
+@keyframes slidemax{
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes slidejitter{
+    25%{
+        width: 5%;
+    }
+    75%{
+        width: 15%;
+    }
 }
 
 @media(min-width:600px) {
@@ -364,7 +383,7 @@ form select {
     }
     .image-slider>div:before{
         width: 2vw;
-        height: 2vw;;
+        height: 2vw;
     }
 }
 
@@ -372,8 +391,12 @@ form select {
     .image-slider img {
         max-width: 40vw;
     }
+    .image-slider div {
+        width: 10%;
+        animation: slidejitter 2s ease-in-out 0.1s 1;
+    }
     .image-slider>div:before{
         width: 1vw;
-        height: 1vw;;
+        height: 1vw;
     }
 }

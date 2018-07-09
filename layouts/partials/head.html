@@ -29,10 +29,4 @@
     {{ end }}
     
     <script src='/js/lazyload.js'></script>
-
-    {{ if .Site.Params.showRSS }}
-    <link href="{{ .Site.Params.RSSPath }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-    <link href="{{ .Site.Params.RSSPath }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
-
 </head>

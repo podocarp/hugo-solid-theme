@@ -4,6 +4,15 @@ A solid theme for hugo.
 # Features
 
 # Shortcodes
+## sliderfigure
+Creates a `<figure>` element with a before/after slider.
+Plays an animation when it comes into focus. The slider will move right and then left again to entice the user to grab it.
+
+{{< sliderfigure src1="/img/photography/after.jpg" src2="/img/photography/before.jpg" caption="Boom">}}
+
+This is done in pure CSS so unfortunately, mobile browsers cannot drag the handle.
+However as a workaround the animation for mobile browsers loop indefinitely.
+
 ## lboxfigure
 Creates a `<figure>` element with a lightbox effect, i.e. clickable image.
 

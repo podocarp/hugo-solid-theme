@@ -154,17 +154,11 @@ code {
 }
 
 .massive {
-  height: 50%;
-  width: 50%;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  height: 80vh;
+  font-size: 4vw;
   margin: auto;
   text-align: center;
   font-family: 'Consolas', monospace;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .massive ul {
@@ -174,12 +168,12 @@ code {
 
 .massive ul li {
   float: inherit;
-  margin: 0;
+  margin: 3vw;
   position: relative;
 }
 
 .massive ul li a {
-  background-color: coral;
+  background-color: gray;
   color: aliceblue;
   font-weight: bold
 }
