@@ -1,0 +1,82 @@
+{{ .Scratch.Set "lpages" 2 }}
+{{ .Scratch.Set "rpages" 2 }}
+{{ $paginator := (.Scratch.Get "paginator")}}
+
+
+{{ $lside := sub $paginator.PageNumber 1 }}
+    {{ if (lt $lside (.Scratch.Get "lpages")) }}
+        {{ .Scratch.Add "rpages" (sub (.Scratch.Get "lpages") $lside) }}
+        {{ .Scratch.Set "lpages" $lside }}
+        {{ .Scratch.Set "lmore" false }}
+    {{ else }}
+        {{ .Scratch.Set "lmore" true }}
+    {{ end }}
+    
+    {{ $rside := sub $paginator.TotalPages $paginator.PageNumber }}
+    {{ if (lt $rside (.Scratch.Get "rpages")) }}
+        {{ .Scratch.Add "lpages" (sub (.Scratch.Get "rpages") $rside) }}
+        {{ .Scratch.Set "rpages" $rside }}
+        {{ .Scratch.Set "rmore" false }}
+    {{ else }}
+        {{ .Scratch.Set "rmore" true }}
+    {{ end }}
+<div class="row">
+<ul class="pagination">    
+    
+{{ if $paginator.HasPrev }}
+{{ if .Scratch.Get "lmore" }}
+    <li class="page">
+    <a href="{{ $paginator.First.URL }}">
+        ❰
+    </a>
+    </li>
+{{ end }}
+    <li class="page">
+    <a href="{{ $paginator.Prev.URL }}">
+        ❬
+    </a>
+    </li>
+{{ end }} 
+
+{{ range $paginator.Pagers }}
+    
+    {{ $tmp := (sub $paginator.PageNumber .PageNumber) }}
+    {{ if (le $tmp ($.Scratch.Get "lpages")) }}
+        {{ if ge $tmp 0}}
+            {{$.Scratch.Set "display" true}}
+        {{ end }}
+    {{ end }}
+    {{ $tmp := (sub .PageNumber $paginator.PageNumber) }}
+    {{ if (le $tmp ($.Scratch.Get "rpages")) }}
+        {{ if gt $tmp 0}}
+            {{$.Scratch.Set "display" true}}
+        {{ end }}
+    {{ end }}
+
+    {{ if ($.Scratch.Get "display")}}
+    {{ $.Scratch.Set "display" false }}
+        <li class="page {{ if eq . $paginator }}active{{ end }}">
+            <a href="{{ .URL }}">
+                {{ .PageNumber }}
+            </a>
+        </li>
+    {{ end }}
+{{ end }} 
+
+    
+{{ if $paginator.HasNext }}
+    <li class="page">
+    <a href="{{ $paginator.Next.URL }}">
+            ❭
+    </a>
+    </li>
+{{ if .Scratch.Get "rmore" }}
+    <li class="page">
+    <a href="{{ $paginator.Last.URL }}">
+            ❱
+    </a>
+{{ end }}
+{{ end }}
+
+</ul>
+</div>

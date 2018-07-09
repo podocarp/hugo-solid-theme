@@ -1,6 +1,7 @@
 {{ partial "list_header.html" . }}
+{{ $paginator := .Paginate ( .Scratch.Get "pages") }}
 <div class="row">
-{{ range $index, $page := .Scratch.Get "pages" }}
+{{ range $index, $page := $paginator.Pages }}
         <div class="col-2 box">
             <h2>
                 <a href="{{ .URL }}">{{ .Title }}</a>
@@ -23,3 +24,5 @@
         {{ end }}
 {{ end }}
     </div>
+{{ .Scratch.Set "paginator" $paginator}}
+{{ partial "pagination.html" . }}

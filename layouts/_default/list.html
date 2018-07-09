@@ -1,4 +1,4 @@
 {{ define "main" }}
-  {{ .Scratch.Set "pages" .Paginator.Pages }}
+  {{ .Scratch.Set "pages" .Data.Pages }}
   {{ partial "list_default.html" . }}
 {{ end }}

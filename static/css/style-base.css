@@ -180,12 +180,13 @@ a:focus {
     font-size: 1.2vw;
 }
 
-.breadcrumb li.active {
+li.active {
     font-style: normal;
 }
 
-.breadcrumb li.active>a {
-    font-weight: bold;
+li.active>a {
+    font-weight: bolder;
+    color: rgb(80, 80, 80);
     pointer-events: none;
     text-decoration: none;
 }

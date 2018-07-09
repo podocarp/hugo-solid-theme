@@ -91,7 +91,7 @@ aside>nav>ul {
     margin: 0;
     font-size: 1vw;
     line-height: 1.8vw;
-    max-width: 25%;
+    max-width: 15%;
     overflow: auto;
     padding-right: 0%;
   }
@@ -175,5 +175,19 @@ code {
 .massive ul li a {
   background-color: gray;
   color: aliceblue;
-  font-weight: bold
+  font-weight: bold;
+}
+
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+
+.page {
+  float: left;
+}
+
+.page>a{
+  text-decoration: none;
 }

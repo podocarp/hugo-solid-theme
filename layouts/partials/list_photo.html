@@ -1,4 +1,5 @@
-{{ range .Scratch.Get "pages"}}
+{{ $paginator := .Paginate ( .Scratch.Get "pages") }}
+{{ range $paginator.Pages }}
 <div class="list row">
     <a href="{{ .URL }}" class="banner-link">
         <span class="banner-expander"></span>
@@ -28,3 +29,5 @@
 </div>
 </div>
 {{ end }}
+{{ .Scratch.Set "paginator" $paginator}}
+{{ partial "pagination.html" . }}
