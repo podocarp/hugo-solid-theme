@@ -1,9 +1,9 @@
 <figure class="center">
     <div class="image-slider">
         <div class="lazy">
-            <img src="{{ .Get "src1" }}" />
+            <img class="lazy" src="{{ .Get "src1-lazy" }}" data-src="{{ .Get "src1" }}" />
         </div>
-        <img src="{{ .Get "src2" }}" />
+	<img class="lazy" src="{{ .Get "src2-lazy" }}"data-src="{{ .Get "src2" }}" />
     </div>
     <figcaption>{{.Get "caption"}}</figcaption>
 </figure>

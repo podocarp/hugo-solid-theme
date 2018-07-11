@@ -8,11 +8,11 @@
 {{ end }}
 
 {{- $files := readDir (add $staticURL $thumbURL) -}}
-<div class="row gallery">
+<div class="row lboxgallery">
 {{- range $index, $file := $files }}
 <div class="col-3">
-<a href="#" 
-    data-featherlight-gallery="{{ $fullURL }}{{ .Name | relURL }}">
+<a class="gallery"
+    href="{{ $fullURL }}{{ .Name | relURL }}">
         
     <img class="thumbnail lazy" 
         {{ if $.Scratch.Get "miniThumbURL" }} src="{{ $.Scratch.Get "miniThumbURL" }}{{ .Name | relURL }}" {{ end }}
@@ -23,7 +23,7 @@
 </a>
 </div>
 {{ if (modBool (add $index 1) 3) }}
-</div><div class="row gallery">
+</div><div class="row lboxgallery">
     {{ end }}
 {{- end }}
 </div>

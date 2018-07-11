@@ -145,7 +145,7 @@ figcaption {
   }
 }
 
-.gallery {
+.lboxgallery {
   flex-direction: row !important;
 }
 

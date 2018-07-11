@@ -3,18 +3,15 @@
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
 {{ if .Params.useFLGallery }}
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
     $(document).ready(function () {
         $('.gallery').featherlightGallery({
             previousIcon: '&#9664;',
-            loading: 'Loading nice picture...',
             nextIcon: '&#9654;',
-            galleryFadeIn: 300,
-            galleryFadeOut: 300,
-            targetAttr: "data-featherlight-gallery"
+            loading: 'Loading nice picture...',
         });
     });
 </script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 {{ end }}
 {{ end }}
