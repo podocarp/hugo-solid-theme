@@ -12,6 +12,10 @@
             loading: 'Loading nice picture...',
         });
     });
+    $.featherlightGallery.prototype.afterContent = function () {
+        var caption = this.$currentTarget.find('img').attr('alt');
+        this.$instance.find('figcaption').remove();
+        $('<figcaption>').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+    };
 </script>
-{{ end }}
-{{ end }}
+{{ end }} {{ end }}

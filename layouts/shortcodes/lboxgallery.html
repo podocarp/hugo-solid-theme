@@ -7,19 +7,23 @@
 {{ .Scratch.Set "miniThumbURL" (add $parentURL (.Get "miniThumbDir")) }}
 {{ end }}
 
+{{ if .Inner }}
+{{ .Scratch.Set "captions" (split .Inner "\\") }}
+{{ end }}
+
 {{- $files := readDir (add $staticURL $thumbURL) -}}
+<br>
 <div class="row lboxgallery">
 {{- range $index, $file := $files }}
 <div class="col-3">
 <a class="gallery"
     href="{{ $fullURL }}{{ .Name | relURL }}">
-        
     <img class="thumbnail lazy" 
         {{ if $.Scratch.Get "miniThumbURL" }} src="{{ $.Scratch.Get "miniThumbURL" }}{{ .Name | relURL }}" {{ end }}
         data-src="{{ $thumbURL }}{{ .Name | relURL }}"
-        style="max-width:100%" >
+        style="max-width:100%"
+        alt="{{ index ($.Scratch.Get "captions") $index }}" >
     </img>
-
 </a>
 </div>
 {{ if (modBool (add $index 1) 3) }}
@@ -27,3 +31,4 @@
     {{ end }}
 {{- end }}
 </div>
+<br>

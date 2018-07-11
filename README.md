@@ -35,6 +35,20 @@ Will produce many images, an example of one will be:
 <img class="thumbnail lazy" src="/img/hello/minithumb/20705_090958.jpg" data-src="/img/hello/thumb/20705_090958.jpg" style="width:10%">
 ```
 
+You can provide text within the tags separated by '\' and it will become captioned in the lightbox. For example 
+
+```
+{{< lboxgallery ...>}}
+caption 1\
+caption 2\
+ \
+caption 4\
+{{< /lboxgallery >}}
+```
+
+Will give the first 4 images in that directory a caption each except for the third one.
+Unfortunately right now there is no way to specify a caption for a specific image.
+You will have to create blank captions as shown above to skip images with no captions.
 
 | Param | Purpose |
 | --- | --- |

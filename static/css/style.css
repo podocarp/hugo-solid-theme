@@ -129,6 +129,7 @@ figcaption {
   font-size: 2.1vw;
   line-height: 2.3vw;
   font-weight: lighter;
+  text-align: center;
 }
 
 @media(min-width:600px) {

@@ -362,6 +362,36 @@ form select {
     background: linear-gradient(-45deg, white 50%, transparent 0);
 }
 
+.featherlight{
+    background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+.featherlight-content{
+    border: none !important;
+    max-height: 100% !important;
+}
+
+.featherlight-content>figcaption{
+    min-height: 5% !important;
+    margin: 1% 0 1% 0;
+    color: #000;
+}
+
+@media(min-width:1200px){
+    .featherlight-content>figcaption{
+        max-width: 70vw;
+    }
+}
+
+.featherlight-first-slide .featherlight-previous,
+.featherlight-last-slide .featherlight-next{
+    display: none;
+}
+
+.featherlight-next, .featherlight-previous{
+    top:0;
+}
+
 @keyframes slidemax{
     50% {
         width: 100%;
