@@ -296,6 +296,7 @@ form select {
     -moz-transition: all 0.15s ease-in-out;
     -ms-transition: all 0.15s ease-in-out;
     -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
     outline: none;
 }
 
@@ -367,8 +368,14 @@ form select {
 }
 
 .featherlight-content{
+    text-align: center !important;
     border: none !important;
     max-height: 100% !important;
+}
+
+.featherlight-content img{
+    max-height: 80vh;
+    display: inline-block !important;
 }
 
 .featherlight-content>figcaption{

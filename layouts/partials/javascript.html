@@ -12,10 +12,15 @@
             loading: 'Loading nice picture...',
         });
     });
-    $.featherlightGallery.prototype.afterContent = function () {
+    $.featherlightGallery.prototype.onResize = function () {
         var caption = this.$currentTarget.find('img').attr('alt');
+        var width = this.$content["0"].width;
+        var height = this.$content["0"].height;
+        if (height>width){
+            width *=2;
+        }
         this.$instance.find('figcaption').remove();
-        $('<figcaption>').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+        $('<figcaption>').css("max-width",width).html(caption).appendTo(this.$instance.find('.featherlight-content'));
     };
 </script>
 {{ end }} {{ end }}
