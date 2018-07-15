@@ -384,10 +384,18 @@ form select {
     color: #000;
 }
 
+.featherlight-previous, .featherlight-next{
+	margin-bottom: 5%;
+}
+
+.featherlight-previous>span, .featherlight-next>span{
+	font-size: 3vw !important;
+}
+
 @media(min-width:1200px){
-    .featherlight-content>figcaption{
-        max-width: 70vw;
-    }
+	.featherlight-previous>span, .featherlight-next>span{
+		font-size:3vw !important;
+	}
 }
 
 .featherlight-first-slide .featherlight-previous,

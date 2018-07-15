@@ -13,6 +13,7 @@
 
 {{- $files := readDir (add $staticURL $thumbURL) -}}
 <br>
+<div class="gallerywrapper">
 <div class="row lboxgallery">
 {{- range $index, $file := $files }}
 <div class="col-3">
@@ -30,5 +31,6 @@
 </div><div class="row lboxgallery">
     {{ end }}
 {{- end }}
+</div>
 </div>
 <br>

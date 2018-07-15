@@ -6,11 +6,14 @@
 <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
 <script>
     $(document).ready(function () {
-        $('.gallery').featherlightGallery({
-            previousIcon: '&#9664;',
-            nextIcon: '&#9654;',
-            loading: 'Loading nice picture...',
-        });
+	    $('.gallerywrapper').each(function(_i,gal){
+		$(gal).featherlightGallery({
+            		previousIcon: '&#9664;',
+	            	nextIcon: '&#9654;',
+			filter: '.gallery',
+        	    	loading: 'Loading nice picture...',
+        	});
+	    });
     });
     $.featherlightGallery.prototype.onResize = function () {
         var caption = this.$currentTarget.find('img').attr('alt');
