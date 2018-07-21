@@ -112,7 +112,7 @@ figure {
 }
 
 figure:nth-child(even) {
-  float: right !important;
+  float: right;
 }
 
 figure.center {
