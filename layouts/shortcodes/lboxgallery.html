@@ -3,25 +3,39 @@
 {{- $fullURL := add $parentURL (.Get "fullDir") -}}
 {{- $thumbURL := add $parentURL (.Get "thumbDir") -}}
 
+{{ if .Get "fullDir" }}
+{{ .Scratch.Set "fullURL" (add $parentURL (.Get "fullDir")) }}
+{{ else }}
+{{ .Scratch.Set "fullURL" (add $parentURL "/full/") }}
+{{ end }}
+
+{{ if .Get "thumbDir" }}
+{{ .Scratch.Set "thumbURL" (add $parentURL (.Get "thumbDir")) }}
+{{ else }}
+{{ .Scratch.Set "thumbURL" (add $parentURL "/thumb/") }}
+{{ end }}
+
 {{ if .Get "miniThumbDir" }}
 {{ .Scratch.Set "miniThumbURL" (add $parentURL (.Get "miniThumbDir")) }}
+{{ else }}
+{{ .Scratch.Set "miniThumbURL" (add $parentURL "/minithumb/") }}
 {{ end }}
 
 {{ if .Inner }}
 {{ .Scratch.Set "captions" (split .Inner "\\") }}
 {{ end }}
 
-{{- $files := readDir (add $staticURL $thumbURL) -}}
+{{- $files := readDir (add $staticURL (.Scratch.Get "thumbURL" )) -}}
 <br>
 <div class="gallerywrapper">
 <div class="row lboxgallery">
 {{- range $index, $file := $files }}
 <div class="col-3">
 <a class="gallery"
-    href="{{ $fullURL }}{{ .Name | relURL }}">
+    href="{{ $.Scratch.Get "fullURL" }}{{ .Name | relURL }}">
     <img class="thumbnail lazy" 
         {{ if $.Scratch.Get "miniThumbURL" }} src="{{ $.Scratch.Get "miniThumbURL" }}{{ .Name | relURL }}" {{ end }}
-        data-src="{{ $thumbURL }}{{ .Name | relURL }}"
+        data-src="{{ $.Scratch.Get "thumbURL" }}{{ .Name | relURL }}"
         style="max-width:100%"
         alt="{{ index ($.Scratch.Get "captions") $index }}" >
     </img>
