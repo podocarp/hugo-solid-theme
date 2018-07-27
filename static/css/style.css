@@ -1,4 +1,4 @@
-.content {
+:.content {
   padding-left: 0%;
   padding-right: 0%;
   line-height: 5vw;
@@ -144,6 +144,10 @@ figcaption {
     font-size: 1vw;
     line-height: 1.5vw;
   }
+}
+
+table {
+	margin: auto;
 }
 
 .lboxgallery {
