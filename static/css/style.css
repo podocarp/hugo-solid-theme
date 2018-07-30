@@ -155,9 +155,12 @@ table {
 }
 
 code {
-  margin-left: 2%;
+  background: #11111111;
 }
-
+pre>code{
+	padding:2%;
+	margin-left:1%
+}
 .massive {
   height: 80vh;
   font-size: 4vw;
