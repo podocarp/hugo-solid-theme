@@ -23,8 +23,8 @@ body {
 
 .box-alt {
 	box-shadow: none;
-	border: 3px black dotted;
-	height: 100% !important;
+	line-height: 2.7vw;
+	border: 2px gray dotted;
 }
 
 @media(min-width:600px) {
@@ -38,6 +38,9 @@ body {
     font-size: 1.5vw;
     line-height: 2.5vw;
   }
+	.box-alt {
+					line-height: 2vw;
+	}
 }
 
 @media(min-width:800px) {

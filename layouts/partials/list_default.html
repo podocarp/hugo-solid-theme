@@ -1,20 +1,30 @@
 {{ partial "list_header.html" . }}
 
-<div class="container row reverse">
+<div class="container row-alt">
+    <div class="col-1">
 {{ if .Params.suggestedCategories }}
-    <div class="categories box box-alt col-6">
+	    <div class="box box-alt">
         You're looking at everything. Check out these sections:
         {{ range .Params.suggestedCategories }}
         <br><a href="/categorized/{{.}}">{{.}}</a> 
         {{ end }}
-    </div>
+	    </div>
 {{ end }}
+{{ if .Params.starredPages }}
+	    <div class="box box-alt">
+	Starred ★  Pages:
+        {{ range .Params.starredPages }}
+        <br><a href="{{index . "url"}}">{{ index . "title" }}</a> 
+        {{ end }}
+	    </div>
+{{ end }}
+    </div>
 
 {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
-<div class="col">
+<div class="col-5">
 <div class="row">
 {{ range $index, $page := $paginator.Pages }}
-        <div class="col-2 box">
+        <div class="col-3 box">
             <h2>
                 <a href="{{ .URL }}">{{ .Title }}</a>
             </h2>
