@@ -1,0 +1,55 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Solid Example Site"
+
+theme = "solid"
+
+paginate=6
+pygmentsCodeFences = true
+
+[author]
+	name = "JXD"
+	email = "cm9izxj0@outlook.com"
+
+[params]
+    author = "Your Name"
+    description = "Welcome to my blog."
+    keywords = "blog,personal"
+    info = "Welcome."
+
+    showCopyright = true
+    showSocial = true
+
+    disqusURL = "You would put something legit here."
+
+[[params.social]]
+    name = "Blog"
+    weight = 1
+    url = "/posts/"
+
+[[params.social]]
+    name = "Gallery"
+    weight = 2
+    url = "/photo/"
+
+[menu]
+    [[menu.main]]
+        name = "Gallery"
+        type = "photo"
+        weight = 10
+        url  = "/photo/"
+    [[menu.main]]
+        name = "Blog"
+        type = "post"
+        weight = 5
+        url  = "/posts/"
+    [[menu.main]]
+        name = "About"
+        type = "about"
+        weight = 2
+        url = "/posts/about/"
+    [[menu.main]]
+        name = "Contact"
+        type = "contact"
+        weight = 1
+        url = "/posts/contact/"
