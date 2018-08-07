@@ -3,7 +3,9 @@
 style="{{.Get "style"}}"
 {{else}}
 style="width:40%;"
-{{end}}>
+{{end}}
+class="{{.Get "class"}}"
+>
 <a href="#" data-featherlight="{{ .Get "src" }}">
     <img class="lazy" 
     {{if .Get "minithumb"}}src="{{ .Get "minithumb" }}"{{end}}
