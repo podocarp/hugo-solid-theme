@@ -13,12 +13,18 @@ body {
 
 .box {
   flex: 50% !important;
-  border: 2px gray solid;
+  border: 2px gray ridge;
   box-shadow: 2px 2px;
   padding: 1%;
   margin: 2% 1% 2% 1% !important;
   height: auto !important;
   font-size: 2vw;
+}
+
+.box-alt {
+	box-shadow: none;
+	border: 3px black dotted;
+	height: 100% !important;
 }
 
 @media(min-width:600px) {

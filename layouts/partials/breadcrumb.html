@@ -24,11 +24,3 @@
     {{end}}
 {{ end }}
 
-{{ if .Params.suggestedCategories }}
-    <span class="categories">
-        You're looking at everything. Check out these sections:
-          {{ range .Params.suggestedCategories }}
-        <a href="/categorized/{{.}}">{{.}}</a> 
-        {{ end }}
-      </span>
-{{ end }}
