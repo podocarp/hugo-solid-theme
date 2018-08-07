@@ -1,5 +1,11 @@
 # hugo-solid-theme
 A solid theme for hugo.
+Focus on minimalism and simplicity.
+A plain text page without any extra functionality weighs in at around 300kb.
+Because we're here to read your content, not to watch fancy mouseover animations.
+
+![](readmeImg/screen.png)
+
 
 ## Features
 ### Overloaded Categories
@@ -130,7 +136,7 @@ For example:
 [[starredPages]]
 title="About"
 url="/posts/about"
-
+/
 [[starredPages]]
 title="My favorite food"
 url="/categorized/food/my_fav_food"
