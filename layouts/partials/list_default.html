@@ -21,7 +21,7 @@
     </div>
 
 {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
-<div class="col-5">
+<div style="width:100%">
 <div class="row">
 {{ range $index, $page := $paginator.Pages }}
         <div class="col-3 box">
