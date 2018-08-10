@@ -15,15 +15,28 @@ body {
 	border: 2px gray ridge;
 	box-shadow: 2px 2px;
 	padding: 1%;
-	margin: 2% 1% 2% 1% !important;
 	height: auto !important;
 	font-size: 2vw;
 }
 
+.box>.categories{
+	padding: 0;
+	margin: 3% 0 0 0;
+}
+
 .box-alt {
-	box-shadow: none;
+	box-shadow: 1px 2px;
 	line-height: 2.7vw;
-	border: 2px gray dotted;
+	border: 2px gainsboro ridge;
+	margin: 0 !important;
+	padding: 5%;
+	text-align: right;
+}
+
+.col-alt{
+	padding: 0 !important;
+	margin-top: 1vw;
+	margin-left: 2%;
 }
 
 @media(min-width:600px) {
@@ -36,9 +49,6 @@ body {
 	.box {
 		font-size: 1.5vw;
 		line-height: 2.5vw;
-	}
-	.box-alt {
-		line-height: 2vw;
 	}
 }
 
@@ -61,7 +71,7 @@ body {
 	.box {
 		font-size: 1.3vw;
 		line-height: 2vw;
-		margin: 1% 1% 1% 1% !important;
+		margin: 1vw 1% 1% 1%;
 	}
 }
 

@@ -75,15 +75,12 @@ body {
 }
 
 .col-2 {
-	max-width: 33.33%;
-	padding: 1%;
+	width: 33.33%;
 }
 
 .col-1 {
-	max-width: 16.67%;
-	padding: 1%;
+	width: 16.67%;
 }
-
 
 a {
 	color: rgb(129, 161, 192);
@@ -236,7 +233,7 @@ footer {
 }
 
 .categories {
-	font-size: 2vw;
+	font-size: 1.8vw;
 	line-height: 3vw;
 	padding-bottom: 5%;
 	font-style: oblique;
@@ -244,7 +241,7 @@ footer {
 
 @media(min-width:600px) {
 	.categories {
-		font-size: 1.5vw;
+		font-size: 1.3vw;
 	}
 }
 
