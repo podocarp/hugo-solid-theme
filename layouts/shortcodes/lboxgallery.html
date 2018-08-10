@@ -32,10 +32,10 @@
 {{- range $index, $file := $files }}
 <div class="col-2">
 <a class="gallery"
-    href="{{ $.Scratch.Get "fullURL" }}{{ .Name | relURL }}">
+    href="{{ printf "%s%s" ($.Scratch.Get "fullURL") .Name | absURL }}">
     <img class="thumbnail lazy" 
-        {{ if $.Scratch.Get "miniThumbURL" }} src="{{ $.Scratch.Get "miniThumbURL" }}{{ .Name | relURL }}" {{ end }}
-        data-src="{{ $.Scratch.Get "thumbURL" }}{{ .Name | relURL }}"
+        {{ if $.Scratch.Get "miniThumbURL" }} src="{{ printf "%s%s" ($.Scratch.Get "miniThumbURL") .Name | absURL }}" {{ end }}
+        data-src="{{ printf "%s%s" ($.Scratch.Get "thumbURL") .Name | absURL }}"
         style="max-width:100%"
         alt="{{ index ($.Scratch.Get "captions") $index }}" >
     </img>

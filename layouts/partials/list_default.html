@@ -4,7 +4,7 @@
     <div class="col-1">
 {{ if .Params.suggestedCategories }}
 	    <div class="box box-alt">
-        You're looking at everything. Check out these sections:
+        All categories:
         {{ range .Params.suggestedCategories }}
         <br><a href="/categorized/{{.}}">{{.}}</a> 
         {{ end }}
