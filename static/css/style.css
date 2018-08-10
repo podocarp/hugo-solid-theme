@@ -1,24 +1,23 @@
-:.content {
-  padding-left: 0%;
-  padding-right: 0%;
-  line-height: 5vw;
-  font-size: 3vw;
-  text-align: justify;
+.content {
+	padding: 3% 1% 0 1%;
+	line-height: 5vw;
+	font-size: 3vw;
+	text-align: justify;
 }
 
 body {
-  padding-left: 2%;
-  padding-right: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 .box {
-  flex: 50% !important;
-  border: 2px gray ridge;
-  box-shadow: 2px 2px;
-  padding: 1%;
-  margin: 2% 1% 2% 1% !important;
-  height: auto !important;
-  font-size: 2vw;
+	flex: 50% !important;
+	border: 2px gray ridge;
+	box-shadow: 2px 2px;
+	padding: 1%;
+	margin: 2% 1% 2% 1% !important;
+	height: auto !important;
+	font-size: 2vw;
 }
 
 .box-alt {
@@ -28,131 +27,130 @@ body {
 }
 
 @media(min-width:600px) {
-  .content {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 1.7vw;
-    line-height: 3vw;
-  }
-  .box {
-    font-size: 1.5vw;
-    line-height: 2.5vw;
-  }
+	.content {
+		padding-left: 5%;
+		padding-right: 5%;
+		font-size: 2vw;
+		line-height: 3.3vw;
+	}
+	.box {
+		font-size: 1.5vw;
+		line-height: 2.5vw;
+	}
 	.box-alt {
-					line-height: 2vw;
+		line-height: 2vw;
 	}
 }
 
 @media(min-width:800px) {
-  .content {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.4vw;
-    line-height: 2.5vw;
-  }
+	.content {
+		padding-left: 15%;
+		padding-right: 15%;
+		font-size: 1.4vw;
+		line-height: 2.8vw;
+	}
 }
 
 @media(min-width:1200px) {
-  .content {
-    padding-left: 25%;
-    padding-right: 20%;
-    font-size: 1.1vw;
-    line-height: 1.9vw;
-  }
-  .box {
-    font-size: 1.3vw;
-    line-height: 2vw;
-    margin: 1% 1% 1% 1% !important;
-  }
+	.content {
+		padding-left: 25%;
+		padding-right: 20%;
+		font-size: 1.3vw;
+		line-height: 2.4vw;
+	}
+	.box {
+		font-size: 1.3vw;
+		line-height: 2vw;
+		margin: 1% 1% 1% 1% !important;
+	}
 }
 
 ul {
-  padding-left: 5%;
+	padding-left: 5%;
 }
 
 aside {
-  border: 1px gainsboro;
-  border-style: ridge;
-  font-size: 1.3vw;
-  line-height: 2.5vw;
-  margin: 5% 10% 0 10%;
-  overflow: hidden;
-  white-space: nowrap;
-  display: block;
+	border: 1px gainsboro;
+	border-style: ridge;
+	font-size: 2vw;
+	line-height: 4vw;
+	margin: 5% 10% 0 10%;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
 }
 
 aside ul {
-  padding-left: 5%;
-  list-style: none;
+	padding-left: 5%;
 }
 
 aside>nav>ul {
-  list-style: none;
-  padding: 1%;
+	padding: 1%;
 }
 
 @media (min-width: 1200px) {
-  aside {
-    float: left;
-    position: fixed;
-    left: 2%;
-    top: 20%;
-    margin: 0;
-    font-size: 1vw;
-    line-height: 1.8vw;
-    max-width: 15%;
-    overflow: auto;
-    padding-right: 0%;
-  }
-  aside ul {
-    padding-left: 20%;
-  }
+	aside {
+		float: left;
+		position: fixed;
+		left: 2%;
+		top: 20%;
+		margin: 0;
+		font-size: 1vw;
+		line-height: 2vw;
+		max-width: 15%;
+		overflow: auto;
+		padding-right: 0%;
+	}
+	aside ul {
+		padding-left: 20%;
+		list-style: none;
+	}
 }
 
 figure {
-  float: left;
-  margin: 10px;
-  padding: 3%;
-  max-width: 80%;
-  font-style: italic;
-  font-size: .9vw;
-  line-height: 1vw;
-  text-align: center;
+	float: left;
+	margin: 10px;
+	padding: 3%;
+	max-width: 80%;
+	font-style: italic;
+	font-size: .9vw;
+	line-height: 1vw;
+	text-align: center;
 }
 
 figure:nth-child(even) {
-  float: right;
+	float: right;
 }
 
 figure.center {
-  float: none;
-  margin: 0 auto;
+	float: none;
+	margin: 0 auto;
 }
 
 figure>a {
-  max-width: 100%;
-  margin: 0 auto;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 figcaption {
-  font-size: 2.1vw;
-  line-height: 2.3vw;
-  font-weight: lighter;
-  text-align: center;
+	font-size: 2.1vw;
+	line-height: 2.3vw;
+	font-weight: lighter;
+	text-align: center;
 }
 
 @media(min-width:600px) {
-  figcaption {
-    font-size: 1.5vw;
-    line-height:uvw;
-  }
+	figcaption {
+		font-size: 1.5vw;
+		line-height:uvw;
+	}
 }
 
 @media(min-width:1200px) {
-  figcaption {
-    font-size: 1vw;
-    line-height: 1.5vw;
-  }
+	figcaption {
+		font-size: 1vw;
+		line-height: 1.5vw;
+	}
 }
 
 table {
@@ -160,51 +158,51 @@ table {
 }
 
 .lboxgallery {
-  flex-direction: row !important;
+	flex-direction: row !important;
 }
 
 code {
-  background: #11111111;
+	background: #11111111;
 }
 pre>code{
 	padding:2%;
 	margin-left:1%
 }
 .massive {
-  height: 80vh;
-  font-size: 4vw;
-  margin: auto;
-  text-align: center;
-  font-family: 'Consolas', monospace;
+	height: 80vh;
+	font-size: 4vw;
+	margin: auto;
+	text-align: center;
+	font-family: 'Consolas', monospace;
 }
 
 .massive ul {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 
 .massive ul li {
-  float: inherit;
-  margin: 3vw;
-  position: relative;
+	float: inherit;
+	margin: 3vw;
+	position: relative;
 }
 
 .massive ul li a {
-  background-color: gray;
-  color: aliceblue;
-  font-weight: bold;
+	background-color: gray;
+	color: aliceblue;
+	font-weight: bold;
 }
 
 .pagination {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
+	list-style: none;
+	display: inline-block;
+	padding: 0;
 }
 
 .page {
-  float: left;
+	float: left;
 }
 
 .page>a{
-  text-decoration: none;
+	text-decoration: none;
 }
