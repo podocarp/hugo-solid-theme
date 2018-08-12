@@ -135,7 +135,7 @@ figure {
 	text-align: center;
 }
 
-figure:nth-child(even) {
+figure:nth-of-type(even) {
 	float: right;
 }
 

@@ -17,9 +17,11 @@
     {{ else }} 
     <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | absURL }}"> 
     {{ end }} 
-    
-    {{ if .Params.useFLGallery }}
+
+    {{ if .Params.useFL }}
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    {{ end }}
+    {{ if .Params.useFLGallery }}
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
     {{ end }}
 

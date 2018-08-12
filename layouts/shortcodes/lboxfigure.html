@@ -13,5 +13,5 @@ class="{{.Get "class"}}"
      style="max-width:100%" >
 </img>
 </a>
-<figcaption>{{ .Get "caption" }}{{.Inner}}</figcaption>
+	<figcaption>{{ .Get "caption" }}{{ if .Inner }}{{.Inner}}{{ end }}</figcaption>
 </figure>
