@@ -53,6 +53,10 @@ body {
 	animation-play-state: paused !important;
 }
 
+.col-6 {
+	width: 100%;
+	padding: 1%;
+}
 .col-5 {
 	max-width: 83.33%;
 	padding: 1%;

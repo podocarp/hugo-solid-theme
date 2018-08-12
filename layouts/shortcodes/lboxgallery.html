@@ -25,23 +25,34 @@
 {{ .Scratch.Set "captions" (split .Inner "\\") }}
 {{ end }}
 
+{{ if .Get "panorama" }}
+{{ .Scratch.Set "class" "col-6" }}
+{{ .Scratch.Set "imgStyle" "width:100%" }}
+{{ .Scratch.Set "divisor" 1 }}
+{{ else }}
+{{ .Scratch.Set "class" "col-2" }}
+{{ .Scratch.Set "imgStyle" "max-width:100%" }}
+{{ .Scratch.Set "divisor" 3 }}
+{{ end }}
+
 {{- $files := readDir (add $staticURL (.Scratch.Get "thumbURL" )) -}}
 <br>
 <div class="gallerywrapper">
 <div class="row lboxgallery">
 {{- range $index, $file := $files }}
-<div class="col-2">
+<div class="{{$.Scratch.Get "class"}}">
 <a class="gallery"
     href="{{ printf "%s%s" ($.Scratch.Get "fullURL") .Name | absURL }}">
     <img class="thumbnail lazy" 
         {{ if $.Scratch.Get "miniThumbURL" }} src="{{ printf "%s%s" ($.Scratch.Get "miniThumbURL") .Name | absURL }}" {{ end }}
         data-src="{{ printf "%s%s" ($.Scratch.Get "thumbURL") .Name | absURL }}"
-        style="max-width:100%"
+	style="{{ $.Scratch.Get "imgStyle" }}"
         alt="{{ index ($.Scratch.Get "captions") $index }}" >
     </img>
 </a>
 </div>
-{{ if (modBool (add $index 1) 3) }}
+
+{{ if (modBool (add $index 1) ($.Scratch.Get "divisor")) }}
 </div><div class="row lboxgallery">
     {{ end }}
 {{- end }}

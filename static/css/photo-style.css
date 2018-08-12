@@ -36,10 +36,6 @@ h6 {
     display: block;
 }
 
-a {
-    color: aliceblue;
-}
-
 .list {
     text-align: center;
     background-color: rgb(160, 152, 152);
@@ -61,15 +57,13 @@ a {
     .list:nth-child(odd){
         flex-direction: row-reverse;
     }
-    .banner-img{
-        height: 100%;
-    }
 }
 
 .banner-img-controller {
     overflow: hidden;
     min-height: 50%;
     width: 100%;
+    max-width: 100%;
 }
 
 .banner-img {
@@ -116,7 +110,7 @@ a {
 }
 
 .breadcrumb li {
-    color: wheat;
+    color: darkmagenta;
 }
 
 .footer {
