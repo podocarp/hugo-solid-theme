@@ -14,13 +14,18 @@ body {
 	flex: 50% !important;
 	border: 2px gray ridge;
 	box-shadow: 2px 2px;
-	padding: 1%;
+	padding: 3%;
 	margin: 1% !important;
 	height: auto !important;
 	max-width: none;
 	font-size: 2vw;
 }
-
+.box>h2{
+	margin: 0;
+}
+.box>h2>a{
+	padding:0;
+}
 .box>.categories{
 	padding: 0;
 	margin: 3% 0 0 0;
