@@ -17,6 +17,7 @@ body {
 	padding: 1%;
 	margin: 1% !important;
 	height: auto !important;
+	max-width: none;
 	font-size: 2vw;
 }
 
