@@ -8,10 +8,10 @@
         {{ range .Params.suggestedCategories }}
         <br><a href="/categorized/{{.}}">{{.}}</a> 
         {{ end }}
-	    </div>
 {{ end }}
+<br>
 {{ if .Params.starredPages }}
-	    <div class="box box-alt">
+<br>
 	Starred ★  Pages:
         {{ range .Params.starredPages }}
         <br><a href="{{index . "url"}}">{{ index . "title" }}</a> 
