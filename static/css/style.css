@@ -14,10 +14,10 @@ body {
 	flex: 50% !important;
 	border: 2px gray ridge;
 	box-shadow: 2px 2px;
-	padding: 0 3% 2% 3%;
+	padding: 2% 3% 2% 3%;
 	margin: 1% !important;
 	height: auto !important;
-	font-size: 3vw;
+	font-size: 2.7vw;
 	line-height: 5vw;
 	max-width: none;
 }
@@ -55,7 +55,7 @@ body {
 		line-height: 3.3vw;
 	}
 	.box {
-		font-size: 1.7vw;
+		font-size: 1.8vw;
 		line-height: 2.5vw;
 	}
 }
@@ -64,7 +64,7 @@ body {
 	.content {
 		padding-left: 15%;
 		padding-right: 15%;
-		font-size: 1.5vw;
+		font-size: 1.6vw;
 		line-height: 3vw;
 	}
 }
