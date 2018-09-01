@@ -22,11 +22,12 @@ body {
 	max-width: none;
 }
 
-.box>h2>a{
-	padding: 0;
+.box>h2{
+	margin: 0;
 }
-
-
+.box>h2>a{
+	padding:0;
+}
 .box>.categories{
 	padding: 0;
 	margin: 3% 0 0 0;

@@ -13,7 +13,7 @@
 <br>
 	Starred ★  Pages:
         {{ range .Params.starredPages }}
-        <br><a href="{{index . "url"}}">{{ index . "title" }}</a> 
+        <br><a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
         {{ end }}
 	    </div>
 {{ end }}
