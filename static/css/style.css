@@ -14,11 +14,18 @@ body {
 	flex: 50% !important;
 	border: 2px gray ridge;
 	box-shadow: 2px 2px;
-	padding: 1%;
+	padding: 0 3% 2% 3%;
 	margin: 1% !important;
 	height: auto !important;
-	font-size: 2vw;
+	font-size: 3vw;
+	line-height: 5vw;
+	max-width: none;
 }
+
+.box>h2>a{
+	padding: 0;
+}
+
 
 .box>.categories{
 	padding: 0;
@@ -27,7 +34,6 @@ body {
 
 .box-alt {
 	box-shadow: none;
-	line-height: 2.7vw;
 	border: 2px lightgray dashed;
 	margin: 0 !important;
 	padding: 5%;
@@ -44,11 +50,11 @@ body {
 	.content {
 		padding-left: 5%;
 		padding-right: 5%;
-		font-size: 2vw;
+		font-size: 2.5vw;
 		line-height: 3.3vw;
 	}
 	.box {
-		font-size: 1.5vw;
+		font-size: 1.7vw;
 		line-height: 2.5vw;
 	}
 }
@@ -57,8 +63,8 @@ body {
 	.content {
 		padding-left: 15%;
 		padding-right: 15%;
-		font-size: 1.4vw;
-		line-height: 2.8vw;
+		font-size: 1.5vw;
+		line-height: 3vw;
 	}
 }
 
