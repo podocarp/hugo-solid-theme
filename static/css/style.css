@@ -92,13 +92,17 @@ aside {
 	font-size: 1.8vw;
 	line-height: 4vw;
 	margin: 3% 20% 0 20%;
-	overflow: hidden;
 	white-space: nowrap;
 	display: block;
+	max-height: 70%;
 }
 
 aside ul {
 	padding-left: 5%;
+}
+
+aside>nav {
+		overflow: auto;
 }
 
 aside>nav>ul {
