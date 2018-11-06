@@ -1,4 +1,4 @@
 {{ define "main" }}
     {{ .Scratch.Set "pages" (where .Site.RegularPages ".Params.tags" "intersect" .Params.tags) }}
-    {{ partial "list_default.html" . }}
+	{{ partial "list_default.html" . }}
 {{ end }}

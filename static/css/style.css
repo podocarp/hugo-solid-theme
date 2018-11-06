@@ -39,6 +39,7 @@ body {
 	margin: 0 !important;
 	padding: 5%;
 	text-align: right;
+	overflow: auto;
 }
 
 .col-alt{
