@@ -8,5 +8,6 @@ tags = [""]
 categories = [""]
 useFL = false
 useFLGallery = false
+useVideoJS = false
 showLatex = false
 +++

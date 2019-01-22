@@ -24,7 +24,9 @@
     {{ if .Params.useFLGallery }}
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
     {{ end }}
-
+    {{ if .Params.useVideoJS }}
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+    {{ end }}
     {{ if .Params.showLatex }}
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script type="text/x-mathjax-config">

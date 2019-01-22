@@ -1,0 +1,10 @@
+<figure>
+<video class="video-js vjs-16-9" controls preload="auto" width="{{ .Get "width" }}" height="{{ .Get "height" }}" poster="{{ if .Get "thumb" }}{{ .Get "thumb" }}{{ end }}" data-setup="{}">
+    <source src="{{ .Get "src"}}" type="video/{{ .Get "video" }}">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+</video>
+	<figcaption>{{ .Get "caption" }}{{ if .Inner }}{{.Inner}}{{ end }}</figcaption>
+</figure>

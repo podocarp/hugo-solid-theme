@@ -136,8 +136,6 @@ aside>nav>ul {
 }
 
 figure {
-	float: left;
-	margin: 10px;
 	padding: 3%;
 	max-width: 80%;
 	font-style: italic;
@@ -146,7 +144,11 @@ figure {
 	text-align: center;
 }
 
-figure:nth-of-type(even) {
+figure.alt{
+	float: left;
+}
+
+figure.alt:nth-of-type(even) {
 	float: right;
 }
 

@@ -11,13 +11,13 @@
 <br>
 {{ if .Params.starredPages }}
 <br>
-	Starred ★  Pages:
+	★  Pages:
         {{ range .Params.starredPages }}
         <br><a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
         {{ end }}
-	    </div>
 {{ end }}
     </div>
+	    </div>
 
 {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
 <div style="width:100%">

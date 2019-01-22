@@ -26,4 +26,10 @@
         $('<figcaption>').css("max-width",width).html(caption).appendTo(this.$instance.find('.featherlight-content'));
     };
 </script>
-{{ end }} {{ end }}
+{{ end }}
+{{ end }}
+{{ if .Params.useVideoJS }}
+<script src="https://vjs.zencdn.net/7.4.1/video.js">
+window.HELP_IMPROVE_VIDEOJS = false;
+</script>
+{{ end }}
