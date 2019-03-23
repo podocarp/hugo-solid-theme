@@ -1,255 +1,255 @@
-.content {
-	padding: 3% 1% 0 1%;
-	line-height: 5vw;
-	font-size: 3vw;
-	text-align: justify;
-}
-
 body {
-	padding-left: 2%;
-	padding-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .box {
-	flex: 50% !important;
-	border: 2px gray ridge;
-	box-shadow: 2px 2px;
-	padding: 2% 3% 2% 3%;
-	margin: 1% !important;
-	height: auto !important;
-	font-size: 2.7vw;
-	line-height: 5vw;
-	max-width: none;
+    flex: 50% !important;
+    border: 2px gray ridge;
+    box-shadow: 2px 2px;
+    padding: 2% 3% 2% 3%;
+    margin: 1% !important;
+    height: auto !important;
+    font-size: 2.7vw;
+    line-height: 5vw;
+    max-width: none;
 }
 
 .box>h2{
-	margin: 0;
+    margin: 0;
 }
 .box>h2>a{
-	padding:0;
+    padding:0;
 }
 .box>.categories{
-	padding: 0;
-	margin: 3% 0 0 0;
+    padding: 0;
+    margin: 3% 0 0 0;
 }
 
 .box-alt {
-	box-shadow: none;
-	border: 2px lightgray dashed;
-	margin: 0 !important;
-	padding: 5%;
-	text-align: right;
-	overflow: auto;
+    box-shadow: none;
+    border: 2px lightgray dashed;
+    margin: 0 !important;
+    padding: 5%;
+    text-align: right;
+    overflow: auto;
 }
 
 .col-alt{
-	padding: 0 !important;
-	margin-top: 1vw;
-	margin-left: 2%;
+    padding: 0 !important;
+    margin-top: 1vw;
+    margin-left: 2%;
+}
+
+.content {
+    padding: 3% 1% 0 1%;
+    line-height: 5vw;
+    font-size: 3vw;
+    text-align: justify;
 }
 
 @media(min-width:600px) {
-	.content {
-		padding-left: 5%;
-		padding-right: 5%;
-		font-size: 2.5vw;
-		line-height: 3.3vw;
-	}
-	.box {
-		font-size: 1.8vw;
-		line-height: 2.5vw;
-	}
+    .content {
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 2.2vw;
+        line-height: 4vw;
+    }
+    .box {
+        font-size: 1.8vw;
+        line-height: 2.5vw;
+    }
 }
 
 @media(min-width:800px) {
-	.content {
-		padding-left: 15%;
-		padding-right: 15%;
-		font-size: 1.6vw;
-		line-height: 3vw;
-	}
+    .content {
+        padding-left: 15%;
+        padding-right: 15%;
+        font-size: 1.6vw;
+        line-height: 3vw;
+    }
 }
 
-@media(min-width:1200px) {
-	.content {
-		padding-left: 25%;
-		padding-right: 15%;
-		font-size: 1.3vw;
-		line-height: 2.4vw;
-	}
-	.box {
-		font-size: 1.3vw;
-		line-height: 2vw;
-		margin: 1vw 1% 1% 1%;
-	}
+@media(min-width:1200) {
+    .content {
+        padding-left: 25%;
+        padding-right: 15%;
+        font-size: 1vw;
+        line-height: 1.5vw;
+    }
+    .box {
+        font-size: 1.3vw;
+        line-height: 2vw;
+        margin: 1vw 1% 1% 1%;
+    }
 }
 
 ul {
-	padding-left: 5%;
+    padding-left: 5%;
 }
 
 aside {
-	border: 1px gainsboro ridge;
-	font-size: 1.8vw;
-	line-height: 4vw;
-	margin: 3% 20% 0 20%;
-	white-space: nowrap;
-	display: block;
-	max-height: 70%;
+    border: 1px gainsboro ridge;
+    font-size: 1.8vw;
+    line-height: 4vw;
+    margin: 3% 20% 0 20%;
+    white-space: nowrap;
+    display: block;
+    max-height: 70%;
 }
 
 aside ul {
-	padding-left: 5%;
+    padding-left: 5%;
 }
 
 aside>nav {
-		overflow: auto;
+    overflow: auto;
 }
 
 aside>nav>ul {
-	padding: 1%;
+    padding: 1%;
 }
 
 @media (min-width:800px){
-	aside {
-		font-size: 1.5vw;
-		line-height: 2vw;
-	}
+    aside {
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
 }
 
 @media (min-width: 1200px) {
-	aside {
-		float: left;
-		position: fixed;
-		left: 2%;
-		top: 20%;
-		margin: 0;
-		font-size: 1vw;
-		line-height: 2vw;
-		width:15%;
-		overflow: auto;
-		padding-right: 0%;
-	}
-	aside ul {
-		padding-left: 20%;
-		list-style: none;
-	}
+    aside {
+        float: left;
+        position: fixed;
+        left: 2%;
+        top: 20%;
+        margin: 0;
+        font-size: 1vw;
+        line-height: 2vw;
+        width:15%;
+        overflow: auto;
+        padding-right: 0%;
+    }
+    aside ul {
+        padding-left: 20%;
+        list-style: none;
+    }
 }
 
 figure {
-	padding: 3%;
-	max-width: 80%;
-	font-style: italic;
-	font-size: .9vw;
-	line-height: 1vw;
-	text-align: center;
+    padding: 3%;
+    max-width: 80%;
+    font-style: italic;
+    font-size: .9vw;
+    line-height: 1vw;
+    text-align: center;
 }
 
 figure.alt{
-	float: left;
+    float: left;
 }
 
 figure.alt:nth-of-type(even) {
-	float: right;
+    float: right;
 }
 
 figure.center {
-	float: none;
-	margin: 0 auto;
+    float: none;
+    margin: 0 auto;
 }
 
 figure>a {
-	max-width: 100%;
-	margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 figcaption {
-	font-size: 2.1vw;
-	line-height: 2.3vw;
-	font-weight: lighter;
-	text-align: center;
+    font-size: 2.1vw;
+    line-height: 2.3vw;
+    font-weight: lighter;
+    text-align: center;
 }
 
 @media(min-width:600px) {
-	figcaption {
-		font-size: 1.5vw;
-		line-height:uvw;
-	}
+    figcaption {
+        font-size: 1.5vw;
+        line-height:uvw;
+    }
 }
 
 @media(min-width:1200px) {
-	figcaption {
-		font-size: 1vw;
-		line-height: 1.5vw;
-	}
+    figcaption {
+        font-size: 1vw;
+        line-height: 1.5vw;
+    }
 }
 
 table {
-	margin: auto;
+    margin: auto;
 }
 
 .lboxgallery {
-	flex-direction: row !important;
-	padding-top: 1%;
-	padding-bottom: 1%;
+    flex-direction: row !important;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 .lboxgallery>.col-2{
-	padding-top: 0;
-	padding-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .lboxgallery>.col-2>.gallery{
-	height: 0;
-	padding: 0;
+    height: 0;
+    padding: 0;
 }
 
 code {
-	background: #11111111;
+    background: #11111111;
 }
 pre>code{
-	padding:2%;
-	margin-left:1%
+    padding:2%;
+    margin-left:1%
 }
 .massive {
-	height: 80vh;
-	font-size: 4vw;
-	margin: auto;
-	text-align: center;
-	font-family: 'Consolas', monospace;
+    height: 80vh;
+    font-size: 4vw;
+    margin: auto;
+    text-align: center;
+    font-family: 'Consolas', monospace;
 }
 
 .massive>h2{
-	font-size: 2.5vw;
+    font-size: 2.5vw;
 }
 
 .massive ul {
-	list-style-type: none;
-	padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .massive ul li {
-	float: inherit;
-	margin: 3vw;
-	position: relative;
+    float: inherit;
+    margin: 3vw;
+    position: relative;
 }
 
 .massive ul li a {
-	background-color: gray;
-	color: aliceblue;
-	font-weight: bold;
+    background-color: gray;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 .pagination {
-	list-style: none;
-	display: inline-block;
-	padding: 0;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
 }
 
 .page {
-	float: left;
+    float: left;
 }
 
 .page>a{
-	text-decoration: none;
+    text-decoration: none;
 }
