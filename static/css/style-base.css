@@ -372,12 +372,13 @@ form select {
 }
 
 .MJXc-display {
-    overflow: scroll;
+    overflow: auto;
 }
 
 @media(min-width:1200px) {
     .MJXc-display {
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
 }
 
