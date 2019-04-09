@@ -56,7 +56,7 @@ body {
         line-height: 4vw;
     }
     .box {
-        font-size: 1.8vw;
+        font-size: 1.7vw;
         line-height: 2.5vw;
     }
 }
@@ -72,8 +72,8 @@ body {
 
 @media(min-width:1200px) {
     .content {
-        padding-left: 25%;
-        &padding-right: 15%;
+        padding-left: 23%;
+        padding-right: 18%;
         font-size: 1vw;
         line-height: 1.5vw;
     }
@@ -99,7 +99,7 @@ aside {
 }
 
 aside ul {
-    padding-left: 5%;
+    padding-left: 20px;
 }
 
 aside>nav {
@@ -131,7 +131,7 @@ aside>nav>ul {
         padding-right: 0%;
     }
     aside ul {
-        padding-left: 20%;
+        padding-left: 5%;
         list-style: none;
     }
 }

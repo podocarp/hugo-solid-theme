@@ -137,7 +137,7 @@ code {
     background-color: #000;
     color: #dcdcdc;
     font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 1em;
+    font-size: 0.8em;
     top: 0;
     left: 0;
     align-items: center;
@@ -238,20 +238,29 @@ footer {
 
 .categories {
     font-size: 1.8vw;
-    line-height: 3vw;
+    line-height: 2vw;
     padding-bottom: 5%;
     font-style: oblique;
 }
 
 @media(min-width:600px) {
     .categories {
+        font-size: 1.5vw;
+        line-height: 1.8vw;
+    }
+}
+
+@media(min-width:600px) {
+    .categories {
         font-size: 1.3vw;
+        line-height: 1.5vw;
     }
 }
 
 @media(min-width:1200px) {
     .categories {
-        font-size: 1.3vw;
+        font-size: 1.0vw;
+        line-height: 1.5vw;
     }
 }
 
