@@ -213,7 +213,7 @@ pre>code{
     margin-left:1%
 }
 .massive {
-    height: 80vh;
+    height: 80%;
     font-size: 4vw;
     margin: auto;
     text-align: center;
@@ -221,7 +221,8 @@ pre>code{
 }
 
 .massive>h2{
-    font-size: 2.5vw;
+    font-size: 1.5vw;
+    font-height: 2vw;
 }
 
 .massive ul {
