@@ -1,11 +1,8 @@
 body {
-    padding-top: 10%;
-    color: #000000;
-    background-color: #1d1515;
+    padding-top: 5%;
+    background-color: #191315;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5vw;
-    font-weight: 200;
-    letter-spacing: .0625em;
     line-height: 1.8em;
 }
 
@@ -42,11 +39,18 @@ h6 {
     color: rgb(46, 39, 39);
     margin-bottom: 2%;
     position: relative;
-    height: 50vw;
+    height: 33vh;
 }
 
 .list {
     flex-direction: column-reverse;
+}
+
+.banner-img-controller {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    max-height: 35%;
 }
 
 @media(min-width:600px){
@@ -57,13 +61,9 @@ h6 {
     .list:nth-child(odd){
         flex-direction: row-reverse;
     }
-}
-
-.banner-img-controller {
-    overflow: hidden;
-    min-height: 50%;
-    width: 100%;
-    max-width: 100%;
+    .banner-img-controller {
+        max-height: 100%
+    }
 }
 
 .banner-img {
@@ -86,6 +86,33 @@ h6 {
 
 .post {
     display: flex;
+    height: 60%;
+}
+
+.main {
+    padding: 0;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding: 0 0 10% 0;
+    align-items: center;
+    justify-content: center
+}
+
+.post .categories {
+    height: 10%;
+    position: absolute;
+    left: 50%;
+}
+
+.post .categories>p {
+    position: relative;
+    left: -50%;
+}
+
+.post a {
+    color: #c1333c;
 }
 
 .post h2 {
@@ -118,7 +145,7 @@ h6 {
 }
 
 img.wrapleft {
-    float: left;    
+    float: left;
     padding: 5%;
     max-width: 50%;
     max-height: 50vh;

@@ -2,28 +2,29 @@
 <div class="container row-alt">
     <div class="col-2 col-alt">
 {{ if (or .Params.suggestedCategories .Params.starredPages) }}
-	    <div class="box box-alt">
-{{ if .Params.suggestedCategories }}
-        	All categories:
-        	{{ range .Params.suggestedCategories }}
-        	<br><a href="/categorized/{{.}}">{{.}}</a> 
-        	{{ end }}
-{{ end }}
-<br>
-{{ if .Params.starredPages }}
-<br>
-	★  Pages:
+	<div class="box box-alt">
+    {{ if .Params.suggestedCategories }}
+        Suggested Cats.:
+        {{ range .Params.suggestedCategories }}
+        <br><a href="/categorized/{{.}}">{{.}}</a> 
+        {{ end }}
+    {{ end }}
+    <br>
+    {{ if .Params.starredPages }}
+    <br>
+    ★&nbsp;&nbsp;&#8239;&nbsp;<br> 
+        ★ ★
         {{ range .Params.starredPages }}
         <br><a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
         {{ end }}
+    {{ end }}
 {{ end }}
-{{ end }}
-	    </div>
+	</div>
     </div>
-{{ $paginator := .Paginate ( .Scratch.Get "pages") }}
-<div style="width:100%">
-<div class="row">
-{{ range $index, $page := $paginator.Pages }}
+    {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
+    <div style="width:100%">
+    <div class="row">
+    {{ range $index, $page := $paginator.Pages }}
         <div class="col-3 box">
             <h2>
                 <a href="{{ .URL }}">{{ .Title }}</a>
@@ -35,16 +36,20 @@
             
             {{ if .Params.Categories }}
             <p class="categories">
-                Categories: {{ range .Params.Categories }}
+                Categories:
+                {{ range .Params.Categories }}
                 <a href="/categories/{{.}}">{{.}}</a>
                 {{ end }}
             </p>
         </div>
-    {{ end }}
+            {{ end }}
         {{ if (modBool (add $index 1) 2) }}
-            </div><div class="row">
+            </div>
+            <div class="row">
         {{ end }}
-{{ end }}
-	    </div></div></div>
+    {{ end }}
+    </div>
+    </div>
+</div>
 {{ .Scratch.Set "paginator" $paginator}}
 {{ partial "pagination.html" . }}

@@ -6,7 +6,7 @@
     </a>
 
     <div class="col-3 post">
-        <div class="centered">
+        <div class="main">
             <h2>{{ .Title }}</h2>
 
             <date>{{ .Date.Format "January 2, 2006" }}</date>
@@ -14,11 +14,14 @@
             <p class="summary">{{ .Params.summary }}</p>
 
             {{ if .Params.Categories }}
-            <p class="categories">
-                Categories: {{ range .Params.Categories }}
-                <a href="/categories/{{.}}">{{.}}</a>
+            <div class="categories">
+                <p>
+                Categories:
+                {{ range .Params.Categories }}
+                    <a href="/gallery/{{.}}">{{.}}</a>
                 {{ end }}
-            </p>
+                </p>
+            </div>
             {{ end }}
 
         </div>

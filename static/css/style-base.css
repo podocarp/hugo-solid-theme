@@ -6,8 +6,7 @@ body {
     background-color: #fefefe;
     font-family: 'Lato', 'Arial', sans-serif;
     font-size: 2vw;
-    font-weight: 400;
-    letter-spacing: .0625em;
+    letter-spacing: .03em;
     line-height: 1.8em;
     height: 100%;
     display: block;
@@ -89,7 +88,7 @@ body {
 }
 
 a {
-    color: rgb(129, 161, 192);
+    color: rgb(120, 160, 192);
     padding: 5px;
 }
 
@@ -131,22 +130,38 @@ code {
 
 .navigation {
     display: flex;
-    justify-content: space-around;
-    z-index: 100;
     position: fixed;
-    background-color: #000;
-    color: #dcdcdc;
-    font-family: Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 0.8em;
     top: 0;
     left: 0;
-    align-items: center;
     width: 100vw;
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    color: #dcdcdc;
+    font-family: Arial, sans-serif !important;
+    font-size: 1.7vw;
+    line-height: 1.5em;
+    font-weight: 200;
 }
 
-.navigation a:hover,
-a:focus {
-    text-decoration: underline;
+@media(min-width:600px){
+    .navigation {
+        font-size: 1.5vw;
+        line-height: 2em;
+    }
+}
+
+@media(min-width:800px){
+    .navigation {
+        font-size: 1.3vw;
+    }
+}
+
+@media(min-width:1200px){
+    .navigation {
+        font-size: 1vw;
+    }
 }
 
 .navigation ul {
@@ -159,6 +174,7 @@ a:focus {
 
 .navigation ul li {
     float: right;
+    padding: 0;
     margin: 0;
     padding-left: 3%;
     padding-right: 3%;
@@ -167,17 +183,18 @@ a:focus {
 
 .navigation .active {
     background-color: rgb(255, 255, 255);
-}
-
-.active a {
     color: #000000;
 }
 
 .navigation a {
+    display: block;
     color: #fefefe;
     text-decoration: none;
-    display: block;
     text-align: center;
+}
+
+.navigation a:hover, a:focus {
+    text-decoration: underline;
 }
 
 .breadcrumb {
@@ -218,16 +235,6 @@ li.active>a {
     text-decoration: none;
 }
 
-.centered {
-    padding: 0;
-    position: relative;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    align-items: center;
-    justify-content: center
-}
-
 footer {
     left: 0;
     bottom: 0;
@@ -237,10 +244,11 @@ footer {
 }
 
 .categories {
-    font-size: 1.8vw;
+    font-size: 0.5vw;
     line-height: 2vw;
     padding-bottom: 5%;
     font-style: oblique;
+    z-index:100;
 }
 
 @media(min-width:600px) {
@@ -253,7 +261,7 @@ footer {
 @media(min-width:600px) {
     .categories {
         font-size: 1.3vw;
-        line-height: 1.5vw;
+        line-height: 1.6vw;
     }
 }
 

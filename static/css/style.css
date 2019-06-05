@@ -72,8 +72,8 @@ body {
 
 @media(min-width:1200px) {
     .content {
-        padding-left: 23%;
-        padding-right: 18%;
+        padding-left: 25%;
+        padding-right: 20%;
         font-size: 1vw;
         line-height: 1.5vw;
     }
