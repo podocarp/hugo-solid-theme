@@ -18,7 +18,16 @@
     &nbsp;Contents:
     {{ .TableOfContents }}
   </aside>
-    {{ .Content }}
+    {{ .Content }} 
+    <div class="box-alt" style="text-align:left">
+        See also:
+        <ul>
+        {{ range ((.Site.RegularPages.Related .) | first 5) }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+    </div>
+
     {{ partial "disqus.html" . }}
   </div>
 </section>
