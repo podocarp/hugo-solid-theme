@@ -8,18 +8,19 @@
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
 {{ end }}
     {{ if not (eq .p1.Title "") }}
-    <li {{ if eq .p1 .p2 }} class="active"{{ end }}>
-    {{ if .p1.IsHome }}
-    <a href="/posts">All Posts</a>
-    {{ else }}
-    <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+        <li {{ if eq .p1 .p2 }} class="active"{{ end }}>
+        {{ if .p1.IsHome }}
+            <a href="/posts">All Posts</a>
+        {{ else }}
+            <a href="{{ .p1.Permalink }}">{{ .p1.Title | truncate 20 }}</a>
+        {{ end }}
+        
+        {{ if (eq .p1 .p2) }}
+            {{ with .p1.OutputFormats.Get "rss" }}<a style="pointer-events: initial;" href="{{.Permalink}}"><img style="max-height: 1.8em;" src="/img/feed-icon-14x14.png"/></a>{{end}}
+        {{ else }}
+             →
+        {{ end }}
+        </li>
     {{ end }}
-    {{ if (eq .p1 .p2) }}
-    {{ with .p1.OutputFormats.Get "rss" }}<a style="pointer-events: initial;" href="{{.Permalink}}"><img style="max-height: 1.8em;" src="/img/feed-icon-14x14.png"/></a>{{end}}
-    {{ else }}
-        →
-    {{ end }}
-    </li>
-    {{end}}
 {{ end }}
 

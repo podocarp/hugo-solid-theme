@@ -7,8 +7,9 @@
       </header>
   {{ if .Params.Categories }}
   <div class="categories">
+      {{ $base := .Params.type }}
     Categories: {{ range .Params.Categories }}
-    <a href="/categorized/{{.}}">{{.}}</a> {{ end }}
+    <a href="/{{ $base }}/{{.}}">{{.}}</a> {{ end }}
     <br>
   <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
   </div>

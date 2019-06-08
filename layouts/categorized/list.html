@@ -1,5 +1,0 @@
-{{ define "main" }}
-    {{ .Scratch.Set "pages" (where .Site.RegularPages ".Params.categories" "intersect" .Params.categories) }}
-        {{ .Scratch.Set "categorized" true }}
-	{{ partial "list_default.html" . }}
-{{ end }}

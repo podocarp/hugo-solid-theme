@@ -1,4 +1,10 @@
 {{ define "main" }}
-  {{ .Scratch.Set "pages" .Data.Pages }}
-  {{ partial "list_default.html" . }}
+    {{ .Scratch.Set "pages" (where .Site.RegularPages ".Type" .Type) }}
+    {{ if .Params.categories }}
+        {{ .Scratch.Set "pages" (where (.Scratch.Get "pages") ".Params.categories" "intersect" .Params.categories) }}
+    {{ end }}
+    {{ if .Params.type }}
+        {{ $file := (add "list_" .Params.type) }}
+        {{ partial $file . }}
+    {{ end }}
 {{ end }}
