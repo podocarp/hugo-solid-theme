@@ -8,6 +8,33 @@ Because we're here to read your content, not to watch fancy mouseover animations
 
 
 ## Features
+### Series
+Many times you start a series. For example a travel blog, or some instructional.
+Well I don't like to type links out, so series following a specific format will
+be dealt with automatically. Currently these features are added to series:
+
+- Previous and Next arrows at top and bottom of posts
+
+To be recognized as a series, you need to put all your posts in one folder like
+this:
+
+```
+- araroa/
+  1.md
+  2.md
+  3.md
+  4.md
+  5.md
+  _index.md
+  sum.md
+```
+
+You must name the files ascending numerically from 1. `sum.md` must be present
+to state that it is indeed a series. This `sum.md` serves as a summary for the
+whole series. In the future it is planned to have the contents of this file
+filled out automatically with the titles of the individual posts so that it is
+really a proper summary.
+
 ### Overloaded Categories
 To support sub-categories I simply created a bunch of partials and layouts and turned the paging system into a categorization tool.
 

@@ -1,8 +1,16 @@
 {{ define "main" }}
-    {{ .Scratch.Set "pages" (where .Site.RegularPages ".Type" .Type) }}
     {{ if .Params.categories }}
-        {{ .Scratch.Set "pages" (where (.Scratch.Get "pages") ".Params.categories" "intersect" .Params.categories) }}
+        {{ .Scratch.Set "pages" (where .Site.RegularPages ".Params.categories" "intersect" .Params.categories) }}
+        {{ range (.Scratch.Get "pages") }}
+        {{ end }}
+        {{ range first 1 (where (.Scratch.Get "pages") ".Params.type" "eq" "gallery") }}
+            {{ $.Scratch.Set "associatedGallery" (intersect .Params.categories .Parent.Params.categories) }}
+        {{ end }}
+        {{ .Scratch.Set "pages" (where (.Scratch.Get "pages") ".Type" .Type) }}
+    {{ else }}
+        {{ .Scratch.Set "pages" (where .Site.RegularPages ".Type" .Type) }}
     {{ end }}
+
     {{ if .Params.type }}
         {{ $file := (add "list_" .Params.type) }}
         {{ partial $file . }}

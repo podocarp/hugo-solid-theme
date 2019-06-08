@@ -3,9 +3,9 @@
     <div class="col-2 col-alt">
 {{ if (or .Params.suggestedCategories .Params.starredPages) }}
 	<div class="box box-alt">
-    {{ range first 1 (where (.Scratch.Get "pages") "Params.type" "gallery") }}
-       {{ $cat := index (intersect .Parent.Params.Categories .Params.Categories) 0 }}
-       Associated Gallery:<br>
+    {{ if (.Scratch.Get "associatedGallery") }}
+       {{ $cat := index (.Scratch.Get "associatedGallery") 0}}
+       The gallery has a related page:<br>
        <a href="/gallery/{{$cat}}">{{$cat}}</a>
         <br><br>
     {{ end }}

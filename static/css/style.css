@@ -32,6 +32,8 @@ body {
     margin: 0 !important;
     padding: 5%;
     text-align: right;
+    font-size: 1.7vw;
+    line-height: 2.5vw;
     overflow: auto;
 }
 
@@ -59,6 +61,10 @@ body {
         font-size: 1.7vw;
         line-height: 2.5vw;
     }
+    .box-alt {
+        font-size: 1.5vw;
+        line-height: 2.2vw;
+    }
 }
 
 @media(min-width:800px) {
@@ -67,6 +73,10 @@ body {
         padding-right: 15%;
         font-size: 1.6vw;
         line-height: 3vw;
+    }
+    .box-alt {
+        font-size: 1.2vw;
+        line-height: 2vw;
     }
 }
 
@@ -81,6 +91,10 @@ body {
         font-size: 1.3vw;
         line-height: 2vw;
         margin: 1vw 1% 1% 1%;
+    }
+    .box-alt {
+        font-size: 1vw;
+        line-height: 1.5vw;
     }
 }
 

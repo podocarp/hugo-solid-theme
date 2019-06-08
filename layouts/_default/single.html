@@ -1,35 +1,62 @@
+{{ define "partnav" }}
+    {{ $dir := add (path.Dir .Path) "/" }}
+    {{ $base := (path.Base .Path) }}
+    {{ if (and (fileExists (add $dir "sum.md")) (ne $base "sum.md")) }}
+        {{ $curr := (index (split $base ".") 0) | int }}
+        {{ $previ := (add $curr -1) | string }}
+        {{ $nexti := (add $curr 1) | string }}
+        {{ $prev := (add $dir $previ) }}
+        {{ $next := (add $dir $nexti) }}
+        <div class="row">
+            <div class="col-2">
+                {{ if (fileExists (add $prev ".md")) }}
+                <a href ="/{{ $prev }}">< Part {{ $previ }}</a>
+                {{ end }}
+            </div>
+            <div class="col-2">
+                {{ if (fileExists (add $next ".md" )) }}
+                <a href ="/{{ $next }}">Part {{ $nexti }} ></a>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
+{{ end }}
+
+
 {{ define "main" }}
 <section class="container">
-  <div class="content">
-      {{ partial "breadcrumb.html" . }}
-      <header>
-        <h1>{{ .Title }}</h1>
-      </header>
-  {{ if .Params.Categories }}
-  <div class="categories">
-      {{ $base := .Params.type }}
-    Categories: {{ range .Params.Categories }}
-    <a href="/{{ $base }}/{{.}}">{{.}}</a> {{ end }}
-    <br>
-  <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
-  </div>
-  <hr>
-  {{ end }}
-  <aside>
-    &nbsp;Contents:
-    {{ .TableOfContents }}
-  </aside>
-    {{ .Content }} 
-    <div class="box-alt" style="text-align:left">
-        See also:
-        <ul>
-        {{ range ((.Site.RegularPages.Related .) | first 5) }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <div class="content">
+        {{ partial "breadcrumb.html" . }}
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        {{ if .Params.Categories }}
+        <div class="categories">
+            {{ $base := .Params.type }}
+            Categories: {{ range .Params.Categories }}
+            <a href="/{{ $base }}/{{.}}">{{.}}</a> {{ end }}
+            <br>
+            <date>{{ .Date.Format "January 2, 2006 15:04" }}</date>
+        </div>
+        <hr>
         {{ end }}
-        </ul>
-    </div>
+        {{ template "partnav" . }}
+        <aside>
+            &nbsp;Contents:
+            {{ .TableOfContents }}
+        </aside>
+        {{ .Content }}
+        {{ template "partnav" . }}
+        <div class="box-alt" style="text-align:left">
+            See also:
+            <ul>
+                {{ range ((.Site.RegularPages.Related .) | first 5) }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
 
-    {{ partial "disqus.html" . }}
-  </div>
+        {{ partial "disqus.html" . }}
+    </div>
 </section>
 {{ end }}
