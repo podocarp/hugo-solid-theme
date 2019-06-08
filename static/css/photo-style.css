@@ -2,12 +2,12 @@ body {
     padding-top: 5%;
     background-color: #191315;
     font-family: "Open Sans", sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     line-height: 1.8em;
 }
 
 .content {
-    background-color: lavenderblush;
+    background-color: #e2e2e2;
     padding: 5%;
     font-family: "Lato", sans-serif;
     font-weight: 300;
@@ -34,23 +34,21 @@ h6 {
 }
 
 .list {
+    flex-direction: column-reverse;
+    position: relative;
     text-align: center;
     background-color: rgb(160, 152, 152);
     color: rgb(46, 39, 39);
     margin-bottom: 2%;
     position: relative;
-    height: 33vh;
-}
-
-.list {
-    flex-direction: column-reverse;
+    height: 20vh;
 }
 
 .banner-img-controller {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    max-height: 35%;
+    max-height: 40%;
 }
 
 @media(min-width:600px){
@@ -67,7 +65,9 @@ h6 {
 }
 
 .banner-img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -86,29 +86,31 @@ h6 {
 
 .post {
     display: flex;
-    height: 60%;
+    width: 100%;
 }
 
 .main {
-    padding: 0;
     position: relative;
-    width: 80%;
-    height: auto;
-    margin: auto;
-    padding: 0 0 10% 0;
+    margin: 0 0 20% 0;
+    padding: 0;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    width: 100%;
+}
+
+@media(min-width:600px){
+    .main {
+        margin: 0 0 10% 0;
+    }
 }
 
 .post .categories {
-    height: 10%;
     position: absolute;
-    left: 50%;
+    width: 100%;
 }
 
 .post .categories>p {
     position: relative;
-    left: -50%;
 }
 
 .post a {

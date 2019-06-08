@@ -189,25 +189,10 @@ table {
     margin: auto;
 }
 
-.lboxgallery {
-    flex-direction: row !important;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-.lboxgallery>.col-2{
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-.lboxgallery>.col-2>.gallery{
-    height: 0;
-    padding: 0;
-}
-
 code {
     background: #11111111;
 }
+
 pre>code{
     padding:2%;
     margin-left:1%

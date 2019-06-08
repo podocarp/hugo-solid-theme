@@ -88,7 +88,7 @@ body {
 }
 
 a {
-    color: rgb(120, 160, 192);
+    color: #3194ce;
     padding: 5px;
 }
 
@@ -244,8 +244,8 @@ footer {
 }
 
 .categories {
-    font-size: 0.5vw;
-    line-height: 2vw;
+    font-size: 1.3vw;
+    line-height: 3vw;
     padding-bottom: 5%;
     font-style: oblique;
     z-index:100;
@@ -253,22 +253,22 @@ footer {
 
 @media(min-width:600px) {
     .categories {
-        font-size: 1.5vw;
-        line-height: 1.8vw;
+        font-size: 1.2vw;
+        line-height: 2vw;
     }
 }
 
-@media(min-width:600px) {
+@media(min-width:800px) {
     .categories {
-        font-size: 1.3vw;
-        line-height: 1.6vw;
+        font-size: 1.1vw;
+        line-height: 1.5vw;
     }
 }
 
 @media(min-width:1200px) {
     .categories {
-        font-size: 1.0vw;
-        line-height: 1.5vw;
+        font-size: 1vw;
+        line-height: 1.3vw;
     }
 }
 
@@ -520,4 +520,20 @@ form select {
         width: 1vw;
         height: 1vw;
     }
+}
+
+.lboxgallery {
+    flex-direction: row !important;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.lboxgallery>.col-2{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.lboxgallery>.col-2>.gallery{
+    height: 0;
+    padding: 0;
 }
