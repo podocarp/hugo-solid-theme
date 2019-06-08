@@ -3,6 +3,13 @@
     <div class="col-2 col-alt">
 {{ if (or .Params.suggestedCategories .Params.starredPages) }}
 	<div class="box box-alt">
+    {{ range first 1 (where (.Scratch.Get "pages") "Params.type" "gallery") }}
+       {{ $cat := index (intersect .Parent.Params.Categories .Params.Categories) 0 }}
+       Associated Gallery:<br>
+       <a href="/gallery/{{$cat}}">{{$cat}}</a>
+        <br><br>
+    {{ end }}
+
     {{ if .Params.suggestedCategories }}
         Suggested Cats.:
         {{ range .Params.suggestedCategories }}
@@ -11,17 +18,20 @@
     {{ end }}
     <br>
     {{ if .Params.starredPages }}
-    <br>
-    ★&nbsp;&nbsp;&#8239;&nbsp;<br> 
-        ★ ★
+    <p style="line-height:1em">
+    ★&nbsp;&nbsp;<br>
+    ★★
+    </p>
         {{ range .Params.starredPages }}
-        <br><a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
+        <a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
         {{ end }}
     {{ end }}
 {{ end }}
 	</div>
     </div>
-    {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
+    
+
+    {{ $paginator := .Paginate (.Scratch.Get "pages") }}
     <div style="width:100%">
     <div class="row">
     {{ range $index, $page := $paginator.Pages }}

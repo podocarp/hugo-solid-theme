@@ -1,3 +1,4 @@
+<h1>{{.Title}}</h1>
 {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
 {{ range $paginator.Pages }}
 <div class="list row">
