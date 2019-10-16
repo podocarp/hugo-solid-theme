@@ -49,9 +49,9 @@
         <hr>
         {{ template "partnav" . }}
         <div class="box-alt" style="text-align:left; border:none">
-            See also:
+            Check out:
             <ul>
-                {{ range ((.Site.RegularPages.Related .) | first 5) }}
+                {{ range ((.Site.RegularPages.Related .) | first 3) }}
                 <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                 {{ end }}
             </ul>

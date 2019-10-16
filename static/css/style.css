@@ -1,224 +1,242 @@
 body {
-    padding-left: 2%;
-    padding-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .box {
-    flex: 50% !important;
-    border: 2px gray ridge;
-    box-shadow: 2px 2px;
-    padding: 2% 3% 2% 3%;
-    margin: 1% !important;
-    height: auto !important;
-    font-size: 2.7vw;
-    line-height: 5vw;
-    max-width: none;
+  flex: 50% !important;
+  border: 2px gray ridge;
+  box-shadow: 2px 2px;
+  padding: 2% 3% 2% 3%;
+  margin: 1% !important;
+  height: auto !important;
+  font-size: 1.7vw;
+  line-height: 2.5vw;
+  max-width: none;
 }
 
-.box>h2{
-    margin: 0;
+.box .summary {
+  height: 2em;
 }
-.box>h2>a{
-    padding:0;
+
+.box > h2 {
+  margin: 0;
+  font-size: 1.3em;
 }
-.box>.categories{
-    padding: 0;
-    margin: 3% 0 0 0;
+
+.box > h2 > a {
+  padding: 0;
+}
+
+.box > .categories {
+  padding: 0;
+  margin: 3% 0 0 0;
 }
 
 .box-alt {
-    box-shadow: none;
-    border: 2px lightgray dashed;
-    margin: 0 !important;
-    padding: 5%;
-    text-align: right;
-    font-size: 1.7vw;
-    line-height: 2.5vw;
-    overflow: auto;
+  box-shadow: none;
+  border: 2px lightgray dashed;
+  margin: 0 !important;
+  padding: 5%;
+  text-align: right;
+  font-size: 1.7vw;
+  line-height: 2.5vw;
+  overflow: auto;
 }
 
-.col-alt{
-    padding: 0 !important;
-    margin-top: 1vw;
-    margin-left: 2%;
+.col-alt {
+  padding: 0 !important;
+  margin-top: 1vw;
+  margin-left: 2%;
 }
 
 .content {
-    padding: 3% 1% 0 1%;
-    line-height: 5vw;
-    font-size: 3vw;
-    text-align: justify;
+  padding: 3% 1% 0 1%;
+  line-height: 5vw;
+  font-size: 3vw;
+  text-align: justify;
 }
 
-@media(min-width:600px) {
-    .content {
-        padding-left: 5%;
-        padding-right: 5%;
-        font-size: 2.2vw;
-        line-height: 4vw;
-    }
-    .box {
-        font-size: 1.7vw;
-        line-height: 2.5vw;
-    }
-    .box-alt {
-        font-size: 1.5vw;
-        line-height: 2.2vw;
-    }
-}
-
-@media(min-width:800px) {
-    .content {
-        padding-left: 15%;
-        padding-right: 15%;
-        font-size: 1.6vw;
-        line-height: 3vw;
-    }
-    .box-alt {
-        font-size: 1.2vw;
-        line-height: 2vw;
-    }
-}
-
-@media(min-width:1200px) {
-    .content {
-        padding-left: 28%;
-        padding-right: 25%;
-        font-size: 1vw;
-        line-height: 1.5vw;
-    }
-    .box {
-        font-size: 1.3vw;
-        line-height: 2vw;
-        margin: 1vw 1% 1% 1%;
-    }
-    .box-alt {
-        font-size: 1vw;
-        line-height: 1.5vw;
-    }
-}
-
-ul {
+@media (min-width: 600px) {
+  .content {
     padding-left: 5%;
-}
-
-
-figure {
-    padding: 3%;
-    margin: auto;
-    max-width: 80%;
-    font-style: italic;
-    font-size: .9vw;
-    line-height: 1vw;
-    text-align: center;
-}
-
-figure.wrap{
-    float: left;
-}
-
-figure.wrap:nth-of-type(even) {
-    float: right;
-}
-
-figure.center {
-    float: none;
-    margin: 0 auto;
-}
-
-figure>a {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-figcaption {
-    font-size: 2.1vw;
-    line-height: 2.3vw;
-    font-weight: lighter;
-    text-align: center;
-}
-
-@media(min-width:600px) {
-    figcaption {
-        font-size: 1.5vw;
-        line-height:uvw;
-    }
-}
-
-@media(min-width:1200px) {
-    figcaption {
-        font-size: 1vw;
-        line-height: 1.5vw;
-    }
-}
-
-table {
-    margin: auto;
-}
-
-code {
-    background: #11111111;
-}
-
-pre>code{
-    padding:2%;
-    margin-left:1%
-}
-.massive {
-    height: 80%;
-    font-size: 4vw;
-    margin: auto;
-    text-align: center;
-    font-family: 'Consolas', monospace;
-}
-
-.massive>h2{
+    padding-right: 5%;
+    font-size: 2.2vw;
+    line-height: 4vw;
+  }
+  .box {
     font-size: 1.5vw;
-    font-height: 2vw;
+    line-height: 2.2vw;
+  }
+  .box >h2 {
+    font-size: 1.2em;
+  }
+  .box-alt {
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+  }
+  .box .summary {
+    height: 4em;
+  }
 }
 
-.massive ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.massive ul li {
-    float: inherit;
-    margin: 3vw;
-    position: relative;
-}
-
-.massive ul li a {
-    background-color: gray;
-    color: aliceblue;
-    font-weight: bold;
-}
-
-.pagination {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
-}
-
-.page {
-    float: left;
-}
-
-.page>a{
-    text-decoration: none;
+@media (min-width: 800px) {
+  .content {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.6vw;
+    line-height: 3vw;
+  }
+  .box-alt {
+    font-size: 1.2vw;
+    line-height: 2vw;
+  }
+  .box >h2 {
+    font-size: 1.2em;
+  }
 }
 
 @media (min-width: 1200px) {
-    aside {
-        float: left;
-        position: fixed;
-        left: 2%;
-        top: 20%;
-        margin: 0;
-        font-size: 1vw;
-        line-height: 2vw;
-        width:20%;
-        overflow: auto;
-        padding-right: 0%;
-    }
+  .content {
+    padding-left: 25%;
+    padding-right: 20%;
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+  .box {
+    font-size: 1.2vw;
+    line-height: 2vw;
+    margin: 1vw 1% 1% 1%;
+  }
+  .box-alt {
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+  .box >h2 {
+    font-size: 1.4em;
+  }
+}
+
+ul {
+  padding-left: 5%;
+}
+
+figure {
+  padding: 3%;
+  margin: auto;
+  max-width: 80%;
+  font-style: italic;
+  font-size: 0.9vw;
+  line-height: 1vw;
+  text-align: center;
+}
+
+figure.wrap {
+  float: left;
+}
+
+figure.wrap:nth-of-type(even) {
+  float: right;
+}
+
+figure.center {
+  float: none;
+  margin: 0 auto;
+}
+
+figure > a {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 2.1vw;
+  line-height: 2.3vw;
+  font-weight: lighter;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  figcaption {
+    font-size: 1.5vw;
+    line-height: uvw;
+  }
+}
+
+@media (min-width: 1200px) {
+  figcaption {
+    font-size: 1vw;
+    line-height: 1.5vw;
+  }
+}
+
+table {
+  margin: auto;
+}
+
+code {
+  background: #11111111;
+}
+
+pre > code {
+  padding: 2%;
+  margin-left: 1%;
+}
+.massive {
+  height: 80vh;
+  font-size: 3vw;
+  margin: auto;
+  text-align: center;
+  font-family: "Consolas", monospace;
+}
+
+.massive > h2 {
+  font-size: 1.5vw;
+  font-height: 2vw;
+}
+
+.massive ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.massive ul li {
+  float: inherit;
+  margin: 3vw;
+  position: relative;
+}
+
+.massive ul li a:hover {
+  background-color: gray;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.pagination {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+
+.page {
+  float: left;
+}
+
+.page > a {
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  aside {
+    float: left;
+    position: fixed;
+    left: 2%;
+    top: 20%;
+    margin: 0;
+    font-size: 1vw;
+    line-height: 2vw;
+    width: 20%;
+    overflow: auto;
+    padding-right: 0%;
+  }
 }

@@ -1,5 +1,6 @@
 <div class="massive">
   <h1>{{ .Site.Params.author }}</h1>
+  <h2>{{ .Site.Params.info }}</h2>
   {{ if .Site.Params.showSocial }}
   <ul>
       {{ range .Site.Params.social }}
@@ -8,6 +9,5 @@
     </ul>
   {{ end }}
 
-  <h2>{{ .Site.Params.info }}</h2>
 </div>
   

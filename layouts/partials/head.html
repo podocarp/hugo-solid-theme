@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16">
 
     {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s+%s" href="%s" title="%s" />` .Rel .MediaType.Type .MediaType.Suffix .Permalink $.Site.Title | safeHTML }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
 
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:600" rel="stylesheet">
