@@ -46,8 +46,9 @@
             {{ .TableOfContents }}
         </aside>
         {{ .Content }}
+        <hr>
         {{ template "partnav" . }}
-        <div class="box-alt" style="text-align:left">
+        <div class="box-alt" style="text-align:left; border:none">
             See also:
             <ul>
                 {{ range ((.Site.RegularPages.Related .) | first 5) }}

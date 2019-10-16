@@ -82,8 +82,8 @@ body {
 
 @media(min-width:1200px) {
     .content {
-        padding-left: 25%;
-        padding-right: 20%;
+        padding-left: 28%;
+        padding-right: 25%;
         font-size: 1vw;
         line-height: 1.5vw;
     }
@@ -102,53 +102,6 @@ ul {
     padding-left: 5%;
 }
 
-aside {
-    border: 1px gainsboro ridge;
-    font-size: 1.8vw;
-    line-height: 4vw;
-    margin: 3% 20% 0 20%;
-    white-space: nowrap;
-    display: block;
-    max-height: 70%;
-}
-
-aside ul {
-    padding-left: 20px;
-}
-
-aside>nav {
-    overflow: auto;
-}
-
-aside>nav>ul {
-    padding: 1%;
-}
-
-@media (min-width:800px){
-    aside {
-        font-size: 1.5vw;
-        line-height: 2vw;
-    }
-}
-
-@media (min-width: 1200px) {
-    aside {
-        float: left;
-        position: fixed;
-        left: 2%;
-        top: 20%;
-        margin: 0;
-        font-size: 1vw;
-        line-height: 2vw;
-        width:15%;
-        overflow: auto;
-        padding-right: 0%;
-    }
-    aside ul {
-        padding-left: 5%;
-        list-style: none;
-    }
-}
 
 figure {
     padding: 3%;
@@ -253,4 +206,19 @@ pre>code{
 
 .page>a{
     text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+    aside {
+        float: left;
+        position: fixed;
+        left: 2%;
+        top: 20%;
+        margin: 0;
+        font-size: 1vw;
+        line-height: 2vw;
+        width:20%;
+        overflow: auto;
+        padding-right: 0%;
+    }
 }

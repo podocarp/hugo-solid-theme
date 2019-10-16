@@ -102,8 +102,13 @@ h1 {
 }
 
 h2 {
-    color: #383333;
-    font-size: 1.2em;
+    color: #000000;
+    font-size: 1.4em;
+}
+
+h3 {
+    color: #454545;
+    font-size: 1.1em;
 }
 
 header h1 {
@@ -134,7 +139,7 @@ code {
     top: 0;
     left: 0;
     width: 100vw;
-    z-index: 100;
+    z-index: 999;
     justify-content: space-around;
     align-items: center;
     background-color: #000;
@@ -440,7 +445,7 @@ form select {
 }
 
 .featherlight{
-    background-color: rgba(0, 0, 0, 0.95) !important;
+    background-color: rgba(0, 0, 0, 1) !important;
 }
 
 .featherlight-content{
@@ -462,6 +467,10 @@ form select {
 
 .featherlight-previous, .featherlight-next{
     margin-bottom: 5%;
+}
+
+.featherlight-previous:hover, .featherlight-next:hover {
+    background: rgba(0,0,0,0) !important;
 }
 
 .featherlight-previous>span, .featherlight-next>span{
@@ -537,3 +546,35 @@ form select {
     height: 0;
     padding: 0;
 }
+
+aside {
+    border-top: 1px gainsboro solid;
+    border-bottom: 1px gainsboro solid;
+    font-size: 1.8vw;
+    line-height: 4vw;
+    margin: 3% 20% 0 20%;
+    white-space: nowrap;
+    display: block;
+    max-height: 70%;
+}
+
+aside ul {
+    padding-left: 20px;
+    list-style: circle;
+}
+
+aside>nav {
+    overflow: auto;
+}
+
+aside>nav>ul {
+    padding: 1%;
+}
+
+@media (min-width:800px){
+    aside {
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+}
+

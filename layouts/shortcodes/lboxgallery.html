@@ -29,6 +29,10 @@
 {{ .Scratch.Set "class" "col-6" }}
 {{ .Scratch.Set "imgStyle" "width:100%" }}
 {{ .Scratch.Set "divisor" 1 }}
+{{ else if .Get "columns" }}
+{{ .Scratch.Set "class" "col-2" }}
+{{ .Scratch.Set "imgStyle" "max-width:100%" }}
+{{ .Scratch.Set "divisor" (int (.Get "columns")) }}
 {{ else }}
 {{ .Scratch.Set "class" "col-2" }}
 {{ .Scratch.Set "imgStyle" "max-width:100%" }}

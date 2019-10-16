@@ -10,9 +10,9 @@
     {{ if not (eq .p1.Title "") }}
         <li {{ if eq .p1 .p2 }} class="active"{{ end }}>
         {{ if .p1.IsHome }}
-            <a href="/posts">All Posts</a>
+        <a href="/">Home</a>
         {{ else }}
-            <a href="{{ .p1.Permalink }}">{{ .p1.Title | truncate 20 }}</a>
+            <a href="{{ .p1.Permalink }}">{{ .p1.Title | truncate 15 }}</a>
         {{ end }}
         
         {{ if (eq .p1 .p2) }}

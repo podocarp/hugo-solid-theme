@@ -37,8 +37,8 @@ h6 {
     flex-direction: column-reverse;
     position: relative;
     text-align: center;
-    background-color: rgb(160, 152, 152);
-    color: rgb(46, 39, 39);
+    background-color: #cecece;
+    color: #332222;
     margin-bottom: 2%;
     position: relative;
     height: 20vh;
@@ -54,7 +54,7 @@ h6 {
 @media(min-width:600px){
     .list {
         flex-direction: row;
-        height: 30vw;
+        height: 25vw;
     }
     .list:nth-child(odd){
         flex-direction: row-reverse;
@@ -170,6 +170,6 @@ img.bw {
 }
 
 aside {
-    display: none;
+    border: none;
+    border-bottom: 1px dashed gray;
 }
-
