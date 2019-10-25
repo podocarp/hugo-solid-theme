@@ -44,31 +44,12 @@ body {
   overflow: auto;
 }
 
-.col-alt {
-  padding: 0 !important;
-  margin-top: 1vw;
-  margin-left: 2%;
-}
-
-.content {
-  padding: 3% 1% 0 1%;
-  line-height: 5vw;
-  font-size: 3vw;
-  text-align: justify;
-}
-
 @media (min-width: 600px) {
-  .content {
-    padding-left: 5%;
-    padding-right: 5%;
-    font-size: 2.2vw;
-    line-height: 4vw;
-  }
   .box {
     font-size: 1.5vw;
     line-height: 2.2vw;
   }
-  .box >h2 {
+  .box > h2 {
     font-size: 1.2em;
   }
   .box-alt {
@@ -81,28 +62,16 @@ body {
 }
 
 @media (min-width: 800px) {
-  .content {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.6vw;
-    line-height: 3vw;
-  }
   .box-alt {
     font-size: 1.2vw;
     line-height: 2vw;
   }
-  .box >h2 {
+  .box > h2 {
     font-size: 1.2em;
   }
 }
 
 @media (min-width: 1200px) {
-  .content {
-    padding-left: 25%;
-    padding-right: 20%;
-    font-size: 1vw;
-    line-height: 1.5vw;
-  }
   .box {
     font-size: 1.2vw;
     line-height: 2vw;
@@ -112,9 +81,15 @@ body {
     font-size: 1vw;
     line-height: 1.5vw;
   }
-  .box >h2 {
+  .box > h2 {
     font-size: 1.4em;
   }
+}
+
+.col-alt {
+  padding: 0 !important;
+  margin-top: 1vw;
+  margin-left: 2%;
 }
 
 ul {
@@ -182,6 +157,7 @@ pre > code {
   padding: 2%;
   margin-left: 1%;
 }
+
 .massive {
   height: 80vh;
   font-size: 3vw;
