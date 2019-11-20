@@ -1,4 +1,4 @@
-+++ 
++++
 date = {{ .Date }}
 type = "photo"
 title = ""

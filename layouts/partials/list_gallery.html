@@ -3,7 +3,7 @@
 {{ $paginator := .Paginate ( .Scratch.Get "pages") }}
 {{ range $paginator.Pages }}
 <div class="list row">
-    <a href="{{ .URL }}" class="banner-link">
+    <a href="{{ .Permalink }}" class="banner-link">
         <span class="banner-expander"></span>
     </a>
 

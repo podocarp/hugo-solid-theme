@@ -43,7 +43,7 @@
     {{ range $index, $page := $paginator.Pages }}
         <div class="col-3 box">
             <h2>
-                <a href="{{ .URL }}">{{ .Title }}</a>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
             </h2>
             
             <date>{{ .Date.Format "January 2, 2006" }}</date>

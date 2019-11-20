@@ -1,4 +1,4 @@
-+++ 
++++
 draft = false
 date = {{ .Date }}
 type = "blog"

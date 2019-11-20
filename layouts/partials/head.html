@@ -4,7 +4,19 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>{{ .Site.Title }}</title>
+
+    <meta property="og:title" content="{{ .Title | truncate 35}}">
+    {{ if .Params.bannerImgSrc }}
+    <meta property="og:image" content={{ .Params.bannerImgSrc | absURL }}>
+    {{ else }}
+    <meta property="og:image" content={{ "/img/favicon-32x32.png" | absURL }}>
+    {{ end }}
+    <meta property="og:description" content="{{ .Summary | truncate 155 }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB" />
+
+    <title>{{ .Title | truncate 65 }}</title>
     <link rel="icon" type="image/png" href="{{ "/img/favicon-32x32.png" | absURL }}" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16">
 
@@ -28,7 +40,7 @@
     <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
     {{ end }}
     {{ if .Params.useVideoJS }}
-    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+    <link href="//vjs.zencdn.net/7.3.0/video-js.min.css" rel="stylesheet">
     {{ end }}
     {{ if .Params.showLatex }}
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>

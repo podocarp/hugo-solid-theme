@@ -1,16 +1,17 @@
-+++ 
++++
 date = {{ .Date }}
 type = "blog/gallery"
 title = ""
 summary = ""
 categories = [""]
 [//]: # (Edit and remove these as deemed necessary. FL is featherlight for image
-lightboxes, latex is latex, bannerimgsrc shows an image for gallery type
+lightboxes, bannerimgsrc shows an image for gallery type
 entries, and suggestedcategories just display suggestions when it is an
-_index.md page. Perhaps remove this line as well.)
+_index.md page. The rest are self-explanatory I guess.
 suggestedCategories = ["/"]
 bannerImgSrc = ""
 useFL = true
 useFLGallery = true
+useVideoJS = true
 showLatex = true
 +++
