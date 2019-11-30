@@ -1,9 +1,9 @@
 <div class="container">
-        <header>
-          <h1>{{ .Title }}</h1>
-        </header>
-        {{ partial "breadcrumb.html" . }}
-<br/>
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{ partial "breadcrumb.html" . }}
+    <br/>
 </div>
 <div class="container row-alt">
     <div class="col-2 col-alt">
@@ -17,7 +17,7 @@
     {{ end }}
 
     {{ if .Params.suggestedCategories }}
-        Suggested Cats.:
+        Suggested Categories
         {{ range .Params.suggestedCategories }}
         <br><a href="/blog/{{.}}">{{.}}</a>
         {{ end }}
@@ -25,19 +25,18 @@
     <br>
     {{ if .Params.starredPages }}
     <p style="line-height:1em">
-    ★&nbsp;&nbsp;<br>
-    ★★
+    ★ Starred posts ★
     </p>
         {{ range .Params.starredPages }}
         <a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
         {{ end }}
     {{ end }}
 {{ end }}
-        </div>
     </div>
+</div>
 
     {{ $paginator := .Paginate (.Scratch.Get "pages") }}
-    <div style="width:100%">
+<div style="width:100%">
     <div class="row">
     {{ range $index, $page := $paginator.Pages }}
         <div class="col-3 box">
@@ -58,11 +57,11 @@
         </div>
             {{ end }}
         {{ if (modBool (add $index 1) 2) }}
-            </div>
-            <div class="row">
+        </div>
+        <div class="row">
         {{ end }}
     {{ end }}
-    </div>
+        </div>
     </div>
 </div>
 {{ .Scratch.Set "paginator" $paginator}}
