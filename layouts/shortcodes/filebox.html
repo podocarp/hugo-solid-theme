@@ -1,0 +1,12 @@
+{{ $opts := (.Get "opts") }}
+{{ if not $opts }}
+{{ $opts = "" }}
+{{ end }}
+
+{{ $header := (.Get "path") }}
+{{ $header = (printf "%s<strong>%s</strong>" "<pre class='chroma'><span class='filename'>file</span>" $header) }}
+
+{{ $res := highlight (trim .Inner "\n") "bash" $opts }}
+{{ $res = replace $res "<pre class=\"chroma\">" $header }}
+
+{{ safeHTML $res }}
