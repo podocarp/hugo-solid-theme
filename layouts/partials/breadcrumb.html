@@ -14,7 +14,6 @@
         {{ else }}
             <a href="{{ .p1.Permalink }}">{{ .p1.Title | truncate 15 }}</a>
         {{ end }}
-        
         {{ if (eq .p1 .p2) }}
             {{ with .p1.OutputFormats.Get "rss" }}<a style="pointer-events: initial;" href="{{.Permalink}}"><img style="max-height: 1.8em;" src="/img/feed-icon-14x14.png"/></a>{{end}}
         {{ else }}

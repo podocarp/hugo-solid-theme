@@ -1,18 +1,28 @@
 body {
-  padding-left: 2%;
-  padding-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .box {
-  flex: 50% !important;
-  border: 2px gray ridge;
-  box-shadow: 2px 2px;
-  padding: 2% 3% 2% 3%;
-  margin: 1% !important;
-  height: auto !important;
-  font-size: 1.8vw;
-  line-height: 1.5em;
-  max-width: none;
+    flex: 50% !important;
+    border: 2px gray ridge;
+    box-shadow: 2px 2px;
+    padding: 2% 3% 2% 3%;
+    margin: 1% !important;
+    height: auto !important;
+    font-size: 1.8vw;
+    line-height: 1.5em;
+    max-width: none;
+}
+
+.box-small {
+    font-size:1vw;
+    border: 1px gray ridge;
+    box-shadow: 1px 1px;
+    padding: 1%;
+    margin: 1% !important;
+    height: auto !important;
+    line-height: 1.5em;
 }
 
 .box .summary {
@@ -20,219 +30,227 @@ body {
 }
 
 .box > h2 {
-  margin: 0;
-  font-size: 1.3em;
+    margin: 0;
+    font-size: 1.3em;
 }
 
 .box > h2 > a {
-  padding: 0;
+    padding: 0;
 }
 
 .box > .categories {
-  padding: 0;
-  margin: 3% 0 0 0;
+    padding: 0;
+    margin: 3% 0 0 0;
 }
 
 .box-alt {
-  box-shadow: none;
-  border: 2px lightgray dashed;
-  margin: 0 !important;
-  padding: 5%;
-  text-align: right;
-  font-size: 1.7vw;
-  line-height: 1.5em;
-  overflow: auto;
+    box-shadow: none;
+    border: 2px lightgray dashed;
+    margin: 0 !important;
+    padding: 5%;
+    text-align: right;
+    font-size: 1.7vw;
+    line-height: 1.5em;
+    overflow: auto;
 }
 
 @media (min-width: 600px) {
-  .box {
-    font-size: 1.5vw;
-  }
-  .box > h2 {
-    font-size: 1.2em;
-  }
-  .box-alt {
-    font-size: 1.5vw;
-  }
-  .box .summary {
-    height: 4em;
-  }
+    .box {
+        font-size: 1.5vw;
+    }
+    .box > h2 {
+        font-size: 1.2em;
+    }
+    .box-alt {
+        font-size: 1.5vw;
+    }
+    .box .summary {
+        height: 4em;
+    }
+
+    .box-small {
+        font-size: 1vw;
+    }
 }
 
 @media (min-width: 800px) {
-  .box-alt {
-    font-size: 1.2vw;
-  }
-  .box > h2 {
-    font-size: 1.2em;
-  }
+    .box-alt {
+        font-size: 1.2vw;
+    }
+    .box > h2 {
+        font-size: 1.2em;
+    }
 }
 
 @media (min-width: 1200px) {
-  .box {
-    font-size: 1.2vw;
-    margin: 1vw 1% 1% 1%;
-  }
-  .box-alt {
-    font-size: 1vw;
-  }
-  .box > h2 {
-    font-size: 1.4em;
-  }
+    .box {
+        font-size: 1.2vw;
+        margin: 1vw 1% 1% 1%;
+    }
+    .box-alt {
+        font-size: 1vw;
+    }
+    .box > h2 {
+        font-size: 1.4em;
+    }
+
+    .box-small {
+        font-size: 1vw;
+    }
 }
 
 .col-alt {
-  padding: 0 !important;
-  margin-top: 1vw;
-  margin-left: 2%;
+    padding: 0 !important;
+    margin-top: 1vw;
+    margin-left: 2%;
 }
 
 ul {
-  padding-left: 5%;
+    padding-left: 5%;
 }
 
 figure {
-  padding: 3%;
-  margin: auto;
-  max-width: 80%;
-  font-style: italic;
-  font-size: 0.9vw;
-  line-height: 1vw;
-  text-align: center;
+    padding: 3%;
+    margin: auto;
+    max-width: 80%;
+    font-style: italic;
+    font-size: 0.9vw;
+    line-height: 1vw;
+    text-align: center;
 }
 
 figure.wrap {
-  float: left;
+    float: left;
 }
 
 figure.wrap:nth-of-type(even) {
-  float: right;
+    float: right;
 }
 
 figure.center {
-  float: none;
-  margin: 0 auto;
+    float: none;
+    margin: 0 auto;
 }
 
 figure > a {
-  max-width: 100%;
-  margin: 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 figcaption {
-  font-size: 2.1vw;
-  line-height: 2.3vw;
-  font-weight: lighter;
-  text-align: center;
+    font-size: 2.1vw;
+    line-height: 2.3vw;
+    font-weight: lighter;
+    text-align: center;
 }
 
 @media (min-width: 600px) {
-  figcaption {
-    font-size: 1.5vw;
-    line-height: uvw;
-  }
+    figcaption {
+        font-size: 1.5vw;
+        line-height: uvw;
+    }
 }
 
 @media (min-width: 1200px) {
-  figcaption {
-    font-size: 1vw;
-    line-height: 1.5vw;
-  }
+    figcaption {
+        font-size: 1vw;
+        line-height: 1.5vw;
+    }
 }
 
 table {
-  margin: auto;
+    margin: auto;
 }
 
 code {
-  background: #11111111;
+    background: #11111111;
 }
 
 pre > code {
-  padding: 2%;
-  margin-left: 1%;
+    padding: 2%;
+    margin-left: 1%;
 }
 
 .massive {
-  font-size: 5vw;
-  line-height: 1.25em;
-  text-align: center;
-  font-family: "Consolas", monospace;
+    font-size: 5vw;
+    line-height: 1.25em;
+    text-align: center;
+    font-family: "Consolas", monospace;
 }
 
 @media (min-width: 600px) {
-  .massive {
-    font-size: 5vw;
-    line-height: 5vw;
-  }
+    .massive {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
 }
 
 @media (min-width: 800px) {
-  .massive {
-    font-size: 3vw;
-    line-height: 3vw;
-  }
+    .massive {
+        font-size: 3vw;
+        line-height: 3vw;
+    }
 }
 
 @media (min-width: 1200px) {
-  .massive {
-    font-size: 2vw;
-    line-height: 2vw;
-  }
+    .massive {
+        font-size: 2vw;
+        line-height: 2vw;
+    }
 }
 
 .massive > h1 {
-  font-size: 1.3em;
-  line-height: 1.5em;
+    font-size: 1.3em;
+    line-height: 1.5em;
 }
 
 .massive > h2 {
-  font-size: 1em;
-  line-height: 1.5em;
+    font-size: 1em;
+    line-height: 1.5em;
 }
 
 .massive ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 .massive ul li {
-  float: inherit;
-  margin: 3vw;
-  position: relative;
+    float: inherit;
+    margin: 3vw;
+    position: relative;
 }
 
 .massive ul li a:hover {
-  background-color: gray;
-  color: aliceblue;
-  font-weight: bold;
+    background-color: gray;
+    color: aliceblue;
+    font-weight: bold;
 }
 
 .pagination {
-  list-style: none;
-  display: inline-block;
-  padding: 0;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
 }
 
 .page {
-  float: left;
+    float: left;
 }
 
 .page > a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 @media (min-width: 1200px) {
-  aside {
-    float: left;
-    position: fixed;
-    left: 2%;
-    top: 20%;
-    margin: 0;
-    font-size: 1vw;
-    line-height: 2vw;
-    width: 20%;
-    overflow: auto;
-    padding-right: 0%;
-  }
+    aside {
+        float: left;
+        position: fixed;
+        left: 2%;
+        top: 20%;
+        margin: 0;
+        font-size: 1vw;
+        line-height: 2vw;
+        width: 20%;
+        overflow: auto;
+        padding-right: 0%;
+    }
 }

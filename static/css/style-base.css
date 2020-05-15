@@ -43,13 +43,21 @@ body {
 
 .row {
   display: flex;
+  margin: 0 !important;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .row-alt {
   display: flex;
+  margin: 0 !important;
   flex-direction: row-reverse;
+}
+
+.row-alt-alt {
+  display: flex;
+  margin: 0 !important;
+  flex-direction: row;
 }
 
 .thumbnail {
@@ -165,6 +173,7 @@ header h1 {
   font-size: 2em;
   line-height: 1.5em;
   text-align: left;
+  margin: 1% 0 1% 0;
 }
 
 pre {
@@ -174,7 +183,7 @@ pre {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 1%;
   width: 100%;
 }
 

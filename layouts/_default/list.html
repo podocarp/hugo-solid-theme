@@ -2,10 +2,11 @@
     {{ $visiblePages := where .Site.RegularPages ".Params.hidden" "!=" true }}
     {{ if .Params.categories }}
         {{ .Scratch.Set "pages" (where $visiblePages ".Params.categories" "intersect" .Params.categories) }}
-
-        {{ range first 1 (where (.Scratch.Get "pages") ".Params.type" "eq" "gallery") }}
-            {{ $.Scratch.Set "associatedGallery" (intersect .Params.categories .Parent.Params.categories) }}
+        {{ if where (.Scratch.Get "pages") ".Params.type" "gallery" }}
+            {{ $.Scratch.Set "associatedGallery" .Params.categories }}
         {{ end }}
+
+        {{ .Scratch.Set "pages" (where (.Scratch.Get "pages") ".Type" .Type) }}
     {{ else }}
         {{ .Scratch.Set "pages" (where $visiblePages ".Type" .Type) }}
     {{ end }}

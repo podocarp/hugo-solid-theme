@@ -2,35 +2,50 @@
     <header>
         <h1>{{ .Title }}</h1>
     </header>
-    {{ partial "breadcrumb.html" . }}
-    <br/>
+    {{ partial "breadcrumb.html" . }} <br>
 </div>
+
+{{ if .Params.starredPages }}
+<div class="container">
+<p style="font-size:0.5em; line-height:0"> ★ Starred ★ </p>
+</div>
+<div class="container row-alt-alt">
+    {{ $urls := slice }}
+    {{ range $u := .Params.starredPages }}
+    {{ $urls = $urls | append $u.url }}
+    {{ end }}
+
+    {{ range .Params.starredPages }}
+    {{ range where $.Site.RegularPages ".URL" .url }}
+    <div class="box-small">
+    <a href="{{ .URL }}">{{ .Title }}</a>
+    <p class="summary">
+    {{ .Params.summary | truncate 30 }}
+    </p>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
+
 <div class="container row-alt">
     <div class="col-2 col-alt">
 {{ if (or .Params.suggestedCategories .Params.starredPages) }}
-	<div class="box box-alt">
-    {{ if (.Scratch.Get "associatedGallery") }}
-       {{ $cat := index (.Scratch.Get "associatedGallery") 0}}
-       The gallery has a related page:<br>
-       <a href="/gallery/{{$cat}}">{{$cat}}</a>
-        <br><br>
-    {{ end }}
+        <div class="box box-alt">
+        {{ if (.Scratch.Get "associatedGallery") }}
+            {{ $cat := index (.Scratch.Get "associatedGallery") 0}}
+            The gallery has a related page:<br>
+            <a href="/gallery/{{$cat}}">{{$cat}}</a>
+            <br><br>
+        {{ end }}
 
-    {{ if .Params.suggestedCategories }}
-        Suggested Categories
-        {{ range .Params.suggestedCategories }}
-        <br><a href="/blog/{{.}}">{{.}}</a>
+        {{ if .Params.suggestedCategories }}
+            Suggested Categories
+            {{ range .Params.suggestedCategories }}
+            <br><a href="/blog/{{.}}">{{.}}</a>
+            {{ end }}
         {{ end }}
-    {{ end }}
     <br>
-    {{ if .Params.starredPages }}
-    <p style="line-height:1em">
-    ★ Starred posts ★
-    </p>
-        {{ range .Params.starredPages }}
-        <a href="{{index . "url"}}">{{ index . "title" }}</a> <br>
-        {{ end }}
-    {{ end }}
 {{ end }}
     </div>
 </div>
