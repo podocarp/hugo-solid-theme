@@ -4,7 +4,7 @@
 {{ end }}
 
 {{ $header := (.Get "path") }}
-{{ $header = (printf "%s<strong>%s</strong>" "<pre class='chroma'><span class='filename'>file</span>" $header) }}
+{{ $header = (printf "<pre class='chroma'><div class='filename'>%s<span class='barrier'><strong>%s</strong></span></div>" "<span class='filelabel'>file</span>" $header) }}
 
 {{ $res := highlight (trim .Inner "\n") "bash" $opts }}
 {{ $res = replace $res "<pre class=\"chroma\">" $header }}

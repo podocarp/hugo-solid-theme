@@ -65,13 +65,19 @@
 /* TextWhitespace */ .chroma .w { color: #666666 }
 .termroot { color: orangered }
 .termuser { color: green }
-.filename {
-        margin-right: .5em;
-        background-color: gray;
+.filelabel {
+        background-color: black;
+	color: white;
 	padding: .2em .6em .2em;
+        margin: 0 .5em;
         font-size:75%;
         font-weight:bold;
-	color: #fff;
-        display: inline;
 	border-radius: .5em;
+}
+.filename { color: white; background: #9d9d9d; }
+.barrier {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    box-sizing: border-box;
 }
