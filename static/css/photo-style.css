@@ -1,7 +1,6 @@
 body {
   padding-top: 5%;
   background-color: #191315;
-  font-family: "Open Sans", sans-serif;
   font-size: 1.5vw;
   line-height: 1.5em;
 }
@@ -16,7 +15,6 @@ body {
 .content {
   background-color: #ececec;
   padding: 5% !important;
-  font-family: "Lato", sans-serif;
   font-weight: 300;
 }
 

@@ -2,7 +2,7 @@ body {
   padding-top: 3%;
   color: #323232;
   background-color: #fefefe;
-  font-family: "Lato", "Arial", sans-serif;
+  font-family: sans-serif;
   font-size: 2vw;
   letter-spacing: 0.03em;
   line-height: 1.8em;
@@ -196,7 +196,6 @@ code {
   align-items: center;
   background-color: #000;
   color: #dcdcdc;
-  font-family: Arial, sans-serif !important;
   font-size: 2.5vw;
   line-height: 1.5em;
   font-weight: 200;
@@ -322,7 +321,6 @@ footer {
 
 date {
   font-size: 0.9em;
-  font-family: "Arial";
   font-style: oblique;
 }
 
