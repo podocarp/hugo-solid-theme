@@ -1,30 +1,30 @@
 <div class="container">
+    {{ partial "breadcrumb.html" . }}
     <header>
         <h1>{{ .Title }}</h1>
     </header>
-    {{ partial "breadcrumb.html" . }} <br>
 </div>
 
 {{ if .Params.starredPages }}
-<div class="container">
-<p style="font-size:0.5em; line-height:0"> ★ Starred ★ </p>
-</div>
-<div class="container row-alt-alt">
+<div style="background:#e5f4f3">
+<p style="font-size:0.8em; margin:0; padding-left:.5%;"> ★ starred ★ </p>
+<div class="row-alt-alt">
     {{ $urls := slice }}
     {{ range $u := .Params.starredPages }}
     {{ $urls = $urls | append $u.url }}
     {{ end }}
 
     {{ range .Params.starredPages }}
-    {{ range where $.Site.RegularPages ".URL" .url }}
+    {{ range where $.Site.RegularPages ".RelPermalink" .url }}
     <div class="box-small">
-    <a href="{{ .URL }}">{{ .Title }}</a>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p class="summary">
     {{ .Params.summary | truncate 30 }}
     </p>
     </div>
     {{ end }}
     {{ end }}
+</div>
 </div>
 {{ end }}
 

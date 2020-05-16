@@ -8,25 +8,15 @@ body {
     border: 2px gray ridge;
     box-shadow: 2px 2px;
     padding: 2% 3% 2% 3%;
-    margin: 1% !important;
-    height: auto !important;
-    font-size: 1.8vw;
+    margin: .5%;
+    height: auto;
+    font-size: 2vw;
     line-height: 1.5em;
     max-width: none;
 }
 
-.box-small {
-    font-size:1vw;
-    border: 1px gray ridge;
-    box-shadow: 1px 1px;
-    padding: 1%;
-    margin: 1% !important;
-    height: auto !important;
-    line-height: 1.5em;
-}
-
-.box .summary {
-    padding-bottom: 1em;
+.box > .summary {
+    height: 3em;
 }
 
 .box > h2 {
@@ -39,8 +29,35 @@ body {
 }
 
 .box > .categories {
+    font-size: 0.8em;
     padding: 0;
-    margin: 3% 0 0 0;
+    margin: 1% 0 0 0;
+}
+
+.box-small {
+    font-size:1.8vw;
+    border: 1px gray ridge;
+    box-shadow: 1px 1px;
+    padding: 1%;
+    margin: .5%;
+    height: auto;
+    line-height: 1.25em;
+    min-width: 20%;
+    flex-grow: 1;
+}
+
+.box-small > h2 {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5em
+}
+
+.box-small > h2 > a {
+    padding: 0;
+}
+
+.box-small > .summary {
+    margin: 0;
 }
 
 .box-alt {
@@ -64,12 +81,8 @@ body {
     .box-alt {
         font-size: 1.5vw;
     }
-    .box .summary {
-        height: 4em;
-    }
-
     .box-small {
-        font-size: 1vw;
+        font-size: 1.2vw;
     }
 }
 
@@ -84,18 +97,16 @@ body {
 
 @media (min-width: 1200px) {
     .box {
-        font-size: 1.2vw;
-        margin: 1vw 1% 1% 1%;
+        font-size: 1vw;
     }
     .box-alt {
         font-size: 1vw;
     }
     .box > h2 {
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
-
     .box-small {
-        font-size: 1vw;
+        font-size: 0.8vw;
     }
 }
 
