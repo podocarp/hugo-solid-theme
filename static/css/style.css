@@ -4,7 +4,6 @@ body {
 }
 
 .box {
-    flex: 50% !important;
     border: 2px gray ridge;
     box-shadow: 2px 2px;
     padding: 2% 3% 2% 3%;

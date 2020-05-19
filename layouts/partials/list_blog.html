@@ -6,7 +6,7 @@
 </div>
 
 {{ if .Params.starredPages }}
-<div style="background:#e5f4f3">
+<div style="background:#eaeaef">
 <p style="font-size:0.8em; margin:0; padding-left:.5%;"> ★ starred ★ </p>
 <div class="row-alt-alt">
     {{ $urls := slice }}
@@ -29,8 +29,8 @@
 {{ end }}
 
 <div class="container row-alt">
-    <div class="col-2 col-alt">
-{{ if (or .Params.suggestedCategories .Params.starredPages) }}
+    <div class="col-alt">
+    {{ if (or .Params.suggestedCategories .Params.starredPages) }}
         <div class="box box-alt">
         {{ if (.Scratch.Get "associatedGallery") }}
             {{ $cat := index (.Scratch.Get "associatedGallery") 0}}
@@ -46,36 +46,37 @@
             {{ end }}
         {{ end }}
     <br>
-{{ end }}
+    {{ end }}
+        </div>
     </div>
-</div>
 
     {{ $paginator := .Paginate (.Scratch.Get "pages") }}
-<div style="width:100%">
-    <div class="row">
-    {{ range $index, $page := $paginator.Pages }}
-        <div class="col-3 box">
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
-
-            <date>{{ .Date.Format "January 2, 2006" }}</date>
-            <p class="summary">{{ .Params.summary }}</p>
-
-            {{ if .Params.Categories }}
-            <p class="categories">
-                Categories:
-                {{ range .Params.Categories }}
-                <a href="/blog/{{.}}">{{.}}</a>
-                {{ end }}
-            </p>
-        </div>
-            {{ end }}
-        {{ if (modBool (add $index 1) 2) }}
-        </div>
+    {{ $boxesperrow := 2 }}
+    <div style="width:100%">
         <div class="row">
+        {{ range $index, $page := $paginator.Pages }}
+            <div class='{{ printf "col-%d box" (div 6 $boxesperrow) }}'>
+                <h2>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+
+                <date>{{ .Date.Format "January 2, 2006" }}</date>
+                <p class="summary">{{ .Params.summary }}</p>
+
+                {{ if .Params.Categories }}
+                <p class="categories">
+                    Categories:
+                    {{ range .Params.Categories }}
+                    <a href="/blog/{{.}}">{{.}}</a>
+                    {{ end }}
+                </p>
+            </div>
+                {{ end }}
+            {{ if (modBool (add $index 1) $boxesperrow) }}
+                </div>
+                <div class="row">
+            {{ end }}
         {{ end }}
-    {{ end }}
         </div>
     </div>
 </div>

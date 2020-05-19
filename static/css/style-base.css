@@ -144,6 +144,7 @@ body {
 }
 
 .col-2 {
+    flex: 33.33%;
     min-width: 16.67%;
     max-width: 33.33%;
     padding: 1%;
