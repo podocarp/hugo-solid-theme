@@ -7,15 +7,19 @@
         {{ $nexti := (add $curr 1) | string }}
         {{ $prev := (add $dir $previ) }}
         {{ $next := (add $dir $nexti) }}
+        {{ $sum := (add $dir "sum") }}
         <div class="row">
-            <div class="col-2">
+            <div>
                 {{ if (fileExists (add $prev ".md")) }}
-                <a href ="/{{ $prev }}">< Part {{ $previ }}</a>
+                <a href ="/{{ $prev }}">◀ Part {{ $previ }}</a>
                 {{ end }}
             </div>
-            <div class="col-2">
+            <div>
+                <a href ="/{{ $sum }}">Index</a>
+            </div>
+            <div>
                 {{ if (fileExists (add $next ".md" )) }}
-                <a href ="/{{ $next }}">Part {{ $nexti }} ></a>
+                <a href ="/{{ $next }}">Part {{ $nexti }} ▶</a>
                 {{ end }}
             </div>
         </div>
