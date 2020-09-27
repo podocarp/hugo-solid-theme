@@ -172,10 +172,6 @@ table {
     margin: auto;
 }
 
-code {
-    background: #11111111;
-}
-
 pre > code {
     padding: 2%;
     margin-left: 1%;
@@ -263,4 +259,15 @@ pre > code {
         overflow: auto;
         padding-right: 0%;
     }
+}
+
+button {
+    border: 4px double black;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+}
+
+button:hover {
+    background-color: #ddd;
+    cursor: pointer;
 }
