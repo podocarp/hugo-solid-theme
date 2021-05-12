@@ -63,21 +63,6 @@
 /* GenericTraceback */ .chroma .gt { color: #d22323 }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #666666 }
-.termroot { color: orangered }
-.termuser { color: green }
-.filelabel {
-        background-color: black;
-	color: white;
-	padding: .2em .6em .2em;
-        margin: 0 .5em;
-        font-size:75%;
-        font-weight:bold;
-	border-radius: .5em;
-}
+.termroot { color: orangered; user-select:none; }
+.termuser { color: green; user-select:none;; }
 .filename { color: white; background: #9d9d9d; }
-.barrier {
-    display: inline-block;
-    height: 0;
-    width: 0;
-    box-sizing: border-box;
-}

@@ -1,5 +1,5 @@
 {{ $c := (highlight (trim .Inner "\n") "bash" "")  }}
-{{ $c = (replaceRE `~# ` "<span class='termroot'>root # </span><span class='barrier'></span>" $c) }}
-{{ $c = (replaceRE `~\$ ` "<span class='termuser'>user $ </span><span class='barrier'></span>" $c) }}
+{{ $c = (replaceRE `~# ` "<span class='termroot'>root # </span>" $c) }}
+{{ $c = (replaceRE `~\$ ` "<span class='termuser'>user $ </span>" $c) }}
 
 {{ $c | safeHTML }}

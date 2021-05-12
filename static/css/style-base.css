@@ -193,15 +193,22 @@ pre {
     width: 100%;
 }
 
-.container {
-    margin: 1%;
-    width: 100%;
-}
-
 code {
+    font-family: monospace;
+    background: #EEEEEE;
     letter-spacing: 0px;
     padding: 0;
     overflow: auto;
+}
+
+pre > code {
+    background: none;
+    padding: 0.5em 0 0.5em 1.5em;
+}
+
+.container {
+    margin: 1%;
+    width: 100%;
 }
 
 .navigation {
