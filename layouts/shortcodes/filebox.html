@@ -3,12 +3,17 @@
 {{ $opts = "" }}
 {{ end }}
 
+{{ $lang := (.Get "lang") }}
+{{ if not $lang}}
+{{ $lang = "bash" }}
+{{ end }}
+
 {{ $header := (.Get "path") }}
 {{ $header = (printf
   "<pre class='chroma'><div class='filename'><strong>%s</strong></div>"
   $header) }}
 
-{{ $res := highlight (trim .Inner "\n") "bash" $opts }}
+{{ $res := highlight (trim .Inner "\n") $lang $opts }}
 {{ $res = replace $res "<pre class=\"chroma\">" $header }}
 
 {{ safeHTML $res }}
