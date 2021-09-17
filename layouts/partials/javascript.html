@@ -1,41 +1,51 @@
-{{ if .Params.useFL }}
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src='/js/misc.js'></script>
 
-{{ if .Params.useFLGallery }}
-<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    $(document).ready(function () {
-	    $('.gallerywrapper').each(function(_i,gal){
-		$(gal).featherlightGallery({
-            		previousIcon: '&#9664;',
-	            	nextIcon: '&#9654;',
-			filter: '.gallery',
-        	    	loading: 'Loading nice picture...',
-        	});
-	    });
-    });
-    $.featherlightGallery.prototype.onResize = function () {
-        var caption = this.$currentTarget.find('img').attr('alt');
-        var width = this.$content["0"].width;
-        var height = this.$content["0"].height;
-        if (height>width){
-            width *=2;
-        }
-        this.$instance.find('figcaption').remove();
-        $('<figcaption>').css("max-width",width).html(caption).appendTo(this.$instance.find('.featherlight-content'));
-    };
+{{ if .Params.useFL }}
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script
+    src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"
+    type="text/javascript" charset="utf-8">
 </script>
-{{ end }}
+
+<script src='/js/lazyload.js'></script>
+
+    {{ if .Params.useFLGallery }}
+    <script
+        src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.gallery.min.js"
+        type="text/javascript" charset="utf-8">
+    </script>
+    <script>
+        $(document).ready(function () {
+                $('.gallerywrapper').each(function(_i,gal){
+                    $(gal).featherlightGallery({
+                            previousIcon: '&#9664;',
+                            nextIcon: '&#9654;',
+                            filter: '.gallery',
+                            loading: 'Loading nice picture...',
+                    });
+                });
+        });
+        $.featherlightGallery.prototype.onResize = function () {
+            var caption = this.$currentTarget.find('img').attr('alt');
+            var width = this.$content["0"].width;
+            var height = this.$content["0"].height;
+            if (height>width){
+                width *=2;
+            }
+            this.$instance.find('figcaption').remove();
+            $('<figcaption>').css("max-width",width).html(caption).appendTo(this.$instance.find('.featherlight-content'));
+        };
+    </script>
+    {{ end }}
 {{ end }}
 {{ if .Params.useVideoJS }}
 <script src="//vjs.zencdn.net/7.3.0/video.min.js"></script>
 {{ end }}
 
-<script src='/js/lazyload.js'></script>
 
 {{ if .Params.showLatex }}
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
           tex2jax: {

@@ -10,10 +10,10 @@
 
 {{ $header := (.Get "path") }}
 {{ $header = (printf
-  "<pre class='chroma'><div class='filename'><strong>%s</strong></div>"
+  "$1<div class='filename'><strong>%s</strong></div>"
   $header) }}
 
 {{ $res := highlight (trim .Inner "\n") $lang $opts }}
-{{ $res = replace $res "<pre class=\"chroma\">" $header }}
+{{ $res = replaceRE "(<pre.*?>)" $header $res 1 }}
 
 {{ safeHTML $res }}

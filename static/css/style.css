@@ -267,3 +267,9 @@ button:hover {
     background-color: #ddd;
     cursor: pointer;
 }
+
+.spoiler {
+    background-color: #000;
+    color: #000;
+    cursor: help;
+}
