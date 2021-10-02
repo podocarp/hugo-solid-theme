@@ -273,3 +273,7 @@ button:hover {
     color: #000;
     cursor: help;
 }
+
+.katex-display {
+    overflow: auto hidden;
+}
