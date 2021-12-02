@@ -5,7 +5,7 @@
 
 {{ $lang := (.Get "lang") }}
 {{ if not $lang}}
-{{ $lang = "bash" }}
+{{ $lang = strings.TrimPrefix "." (path.Ext (.Get "path")) }}
 {{ end }}
 
 {{ $header := (.Get "path") }}
