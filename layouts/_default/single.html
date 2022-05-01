@@ -1,6 +1,12 @@
 {{ define "partnav" }}
-    {{ $dir := add (path.Dir .Path) "/" }}
-    {{ $base := (path.Base .Path) }}
+    {{ $path := "" }}
+    {{ with .File }}
+          {{ $path = .Path }}
+    {{ else }}
+          {{ $path = .Path }}
+    {{ end }}
+    {{ $dir := add (path.Dir $path) "/" }}
+    {{ $base := (path.Base $path) }}
     {{ if (and (fileExists (add $dir "sum.md")) (ne $base "sum.md")) }}
         {{ $curr := (index (split $base ".") 0) | int }}
         {{ $previ := (add $curr -1) | string }}
